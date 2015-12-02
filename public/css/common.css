@@ -16,3 +16,114 @@ a {
 	outline: none;
 	text-decoration: none;
 }
+/* header start */
+#header {
+	position: relative;
+	top: 40px;
+	width: 1152px;
+	margin: 0 auto;
+}
+#header span {
+	display: inline-block;
+	width: 216px;
+	height: 106px;
+	margin: 0 4px;
+}
+.nav-1 {
+	background: url('../images/nav-1.png');
+}
+.nav-2 {
+	background: url('../images/nav-2.png');
+}
+.nav-3 {
+	background: url('../images/nav-3.png');
+}
+.nav-4 {
+	background: url('../images/nav-4.png');
+}
+.nav-5 {
+	background: url('../images/nav-5.png');
+}
+.nav-1.active {
+	background: url('../images/nav-1-active.png');
+}
+.nav-2.active {
+	background: url('../images/nav-2-active.png');
+}
+.nav-3.active {
+	background: url('../images/nav-3-active.png');
+}
+.nav-4.active {
+	background: url('../images/nav-4-active.png');
+}
+.nav-5.active {
+	background: url('../images/nav-5-active.png');
+}
+.nav-1.focus {
+	background: url('../images/nav-1-focus.png');
+}
+.nav-2.focus {
+	background: url('../images/nav-2-focus.png');
+}
+.nav-3.focus {
+	background: url('../images/nav-3-focus.png');
+}
+.nav-4.focus {
+	background: url('../images/nav-4-focus.png');
+}
+.nav-5.focus {
+	background: url('../images/nav-5-focus.png');
+}
+/* header end */
+
+/* footer start */
+#footer {
+	position: relative;
+	top: 535px;
+	width: 512px;
+	margin: 0 auto;
+}
+#footer span {
+	display: inline-block;
+	width: 92px;
+	height: 62px;
+	margin: 0 15px;
+}
+.menu-1 {
+	background: url('../images/menu-1.png');
+}
+.menu-2 {
+	background: url('../images/menu-2.png');
+}
+.menu-3 {
+	background: url('../images/menu-3.png');
+}
+.menu-4 {
+	background: url('../images/menu-4.png');
+}
+.menu-1.focus {
+	background: url('../images/menu-1-focus.png');
+}
+.menu-2.focus {
+	background: url('../images/menu-2-focus.png');
+}
+.menu-3.focus {
+	background: url('../images/menu-3-focus.png');
+}
+.menu-4.focus {
+	background: url('../images/menu-4-focus.png');
+}
+/* footer end */
+
+#controller a {
+	display: inline-block;
+	width: 1px;
+}
+#controller .con-header {
+	position: absolute;
+	top: 0;
+}
+#controller .con-footer {
+	position: absolute;
+	bottom: 0;
+}

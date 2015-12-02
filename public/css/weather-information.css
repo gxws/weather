@@ -1,0 +1,48 @@
+.container{
+	position: absolute;
+	top:0px;
+	left: 0px;
+}
+.marquee{
+	position: absolute;
+	top:150px;
+	left:50px;
+	width: 1200px;
+	height: 45px;
+	text-indent: 80px;
+	font-size: 26px;
+	color: #000000;
+	line-height: 45px;
+	border-bottom: 1px solid #2976b2;
+	border-top: 1px solid #2976b2;
+	overflow: hidden;
+	background: url(../images/voice.png) no-repeat;
+}
+body,div{
+	padding: 0;
+	margin: 0;
+}
+body{
+	font-family: simhei;
+}
+.container .map{
+	position: absolute;
+	top:197px;
+	left:75px;
+}
+.map .circul-content{
+	position: absolute;
+	width: 426px;
+	height:390px;
+	top:28px;
+	left:663px;
+	background: url(../images/circular.png) no-repeat;
+}
+.map .circul-content p{
+	font-size: 24px;
+	color: #000000;
+
+}
+span{
+	display: inline-block;
+}
