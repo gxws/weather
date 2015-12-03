@@ -3,20 +3,29 @@
 	top:0px;
 	left: 0px;
 }
-.infor-container .marquee{
+.marquee-border{
 	position: absolute;
+	display: inline-block;
 	top:150px;
 	left:50px;
 	width: 1200px;
+	height:45px;
+	background: url(../images/voice.png) no-repeat;
+	border-bottom: 1px solid #2976b2;
+	border-top: 1px solid #2976b2;
+}
+.infor-container .marquee{
+	position: absolute;
+	display: inline-block;
+	/*top:150px;*/
+	left:75px;
+	width: 1126px;
 	height: 45px;
-	text-indent: 80px;
+	/*text-indent: 80px;*/
 	font-size: 26px;
 	color: #000000;
 	line-height: 45px;
-	border-bottom: 1px solid #2976b2;
-	border-top: 1px solid #2976b2;
 	overflow: hidden;
-	background: url(../images/voice.png) no-repeat;
 }
 .infor-container .map{
 	position: absolute;
@@ -72,9 +81,7 @@
 	left:0;
 	top:0;
 }
-.map-content a:first-child{
-	display: inline-block;
-}
+
 .map-content .bs{
 	position: absolute;
 	left:11px;
