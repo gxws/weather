@@ -2,18 +2,70 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>气象生活</title>
-	<link rel="stylesheet" href="../public/css/common.css" />
-	<link rel="stylesheet" href="../public/css/trend.css" />
+	<title>天气详情</title>
+	<link rel="stylesheet" href="../public/css/weather-trend.css">
+	<link rel="stylesheet" href="../public/css/common.css">
 </head>
 <body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
-	<div id="header">
-		<div class="header-nav">
-			<span id="nav1" class="nav-1 active"></span>
-			<span id="nav2" class="nav-2"></span>
-			<span id="nav3" class="nav-3"></span>
-			<span id="nav4" class="nav-4"></span>
-			<span id="nav5" class="nav-5"></span>
+	<div class="trend-container">
+		<div class="trend-content"> 
+			<div class="show-city">南宁</div>
+			<div class="text-border">
+				<a id="local-trend"class="text" href="#">县级</a>
+				<a class="text" href="#">趋势</a>
+				<a class="text" href="#">指数</a>
+			</div>
+			<div class="trend">
+				<div class="list-container">
+					<ul class="list">
+						<li>
+							<div class="trend-day">9/28</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="trend-weather">阴</div>
+							<div>
+								<div class="min-temp" style="height:40px;">20°</div>
+								<div class="max-temp" style="height:200px;">40°</div>
+							</div>
+						</li>
+						<li>
+							<div class="trend-day">9/28</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="trend-weather">多云</div>
+							<div>
+								<div class="min-temp" style="height:40px;"> 20°</div>
+								<div class="max-temp" style="height:200px;"> 40°</div>
+							</div>
+						</li>
+						<li>
+							<div class="trend-day">9/28</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="trend-weather">阵雨</div>
+							<div>
+								<div class="min-temp" style="height:40px;">20°</div>
+								<div class="max-temp" style="height:200px;">40°</div>
+							</div>
+						</li>
+						<li>
+							<div class="trend-day">9/28</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="trend-weather">阵雨</div>
+							<div>
+								<div class="min-temp" style="height:40px;">20°</div>
+								<div class="max-temp" style="height:200px;">40°</div>
+							</div>
+						</li>
+						<li>
+							<div class="trend-day">9/28</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="trend-weather">晴</div>
+							<div>
+								<div class="min-temp" style="height:40px;">20°</div>
+								<div class="max-temp" style="height:200px;">40°</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="footer">
@@ -24,6 +76,8 @@
 			<span id="menu4" class="menu-4"></span>
 		</div>
 	</div>
+
+
 	<div id="controller">
 		<div class="con-header">
 			<a href="#" onfocus="addFocus('#nav1')" onblur="removeFocus('#nav1')"><img src="../public/images/dot.gif" /></a>
@@ -39,6 +93,7 @@
 			<a href="#" onfocus="addFocus('#menu4')" onblur="removeFocus('#menu4')"><img src="../public/images/dot.gif" /></a>
 		</div>
 	</div>
+
 	<script src="../public/js/common.js"></script>
 </body>
 </html>
