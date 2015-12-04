@@ -2,22 +2,106 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>实时推荐</title>
+	<title>天气详情</title>
+	<link rel="stylesheet" href="../public/css/detail.css">
 	<link rel="stylesheet" href="../public/css/common.css">
 </head>
 <body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
-	<div id="header">
-		<span id="nav1" class="nav-1 active"></span>
-		<span id="nav2" class="nav-2"></span>
-		<span id="nav3" class="nav-3"></span>
-		<span id="nav4" class="nav-4"></span>
-		<span id="nav5" class="nav-5"></span>
+	<div class="detail-container">
+		<div class="detail-content"> 
+			<div class="show-city">南宁</div>
+			<div class="text-border">
+				<a id="local-county"class="text" href="#">县级</a>
+				<a class="text" href="#">趋势</a>
+				<a class="text" href="#">指数</a>
+			</div>
+			<div class="county">
+				<div class="list-container">
+					<ul class="list">
+						<li >
+							<div class="show-county">武鸣</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li>
+							<div class="show-county">隆安</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li>
+							<div class="show-county">马山</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li>
+							<div class="show-county">上林</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li>
+							<div class="show-county">宾阳</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li >
+							<div class="show-county">横县</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li >
+							<div class="show-county">武鸣</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li>
+							<div class="show-county">隆安</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li>
+							<div class="show-county">马山</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li>
+							<div class="show-county">上林</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li>
+							<div class="show-county">宾阳</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+						<li >
+							<div class="show-county">横县</div>
+							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+							<div class="">多云转阵雨</div>
+							<div class="">20℃/38℃</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div id="footer">
-		<span id="menu1" class="menu-1"></span>
-		<span id="menu2" class="menu-2"></span>
-		<span id="menu3" class="menu-3"></span>
-		<span id="menu4" class="menu-4"></span>
+		<div class="footer-menu">
+			<span id="menu1" class="menu-1"></span>
+			<span id="menu2" class="menu-2"></span>
+			<span id="menu3" class="menu-3"></span>
+			<span id="menu4" class="menu-4"></span>
+		</div>
 	</div>
 
 
@@ -38,5 +122,19 @@
 	</div>
 
 	<script src="../public/js/common.js"></script>
+	<script >
+	var localCounty=document.getElementById('local-county');
+	localCounty.focus();
+	// localCounty.innerHTML='县级'+' '+'&lt';
+	// function HTML(id,text){
+	// 	var obj=document.getElementById(id);
+	// 	if(obj.focus()){
+	// 		localCounty.innerHTML=text+'&lt';
+	// 	}
+	// 	if(localCounty.blur()){
+	// 		localCounty.innerHTML=text;
+	// 	}
+	// }
+	</script>
 </body>
 </html>

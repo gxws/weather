@@ -16,6 +16,10 @@ a {
 	outline: none;
 	text-decoration: none;
 }
+li{
+	display: inline-block;
+	list-style: none;
+}
 /* header start */
 #header {
 	position: absolute;
