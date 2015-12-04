@@ -18,8 +18,12 @@ a {
 }
 /* header start */
 #header {
-	position: relative;
+	position: absolute;
 	top: 40px;
+	width: 100%;
+	
+}
+#header .header-nav {
 	width: 1152px;
 	margin: 0 auto;
 }
@@ -78,10 +82,15 @@ a {
 
 /* footer start */
 #footer {
-	position: relative;
-	top: 535px;
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	
+}
+#footer .footer-menu{
 	width: 512px;
 	margin: 0 auto;
+	
 }
 #footer span {
 	display: inline-block;
@@ -117,6 +126,7 @@ a {
 
 #controller a {
 	display: inline-block;
+	float: left;
 }
 #controller .con-header {
 	position: absolute;
