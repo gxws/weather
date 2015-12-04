@@ -3,23 +3,96 @@
 <head>
 	<meta charset="UTF-8">
 	<title>实时推荐</title>
-	<link rel="stylesheet" href="../public/css/common.css">
+	<link rel="stylesheet" href="../public/css/common.css" />
+	<link rel="stylesheet" href="../public/css/weather-recommend.css">
 </head>
 <body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
 	<div id="header">
-		<span id="nav1" class="nav-1 active"></span>
-		<span id="nav2" class="nav-2"></span>
-		<span id="nav3" class="nav-3"></span>
-		<span id="nav4" class="nav-4"></span>
-		<span id="nav5" class="nav-5"></span>
+		<div class="header-nav">
+			<span id="nav1" class="nav-1 active"></span>
+			<span id="nav2" class="nav-2"></span>
+			<span id="nav3" class="nav-3"></span>
+			<span id="nav4" class="nav-4"></span>
+			<span id="nav5" class="nav-5"></span>
+		</div>
+	</div>
+	<div id="recommend-container">
+		<div id="recommend-weather" class="recommend-weather">
+			<div class="recommend-weather-city">
+				<span class="city-name">南宁</span>
+				<span class="date">09/25</span>
+			</div>
+			<img class="weather-theme" src="../public/images/duoyun.png" />
+			<div class="recommend-weather-info">
+				<span class="recommend-weather-info-text">多云</span>
+				<span class="recommend-weather-info-du">29℃/34℃</span>
+			</div>
+			<div class="recommend-weather-future">
+				<div class="recommend-weather-future-item">
+					<span class="date">09/26</span>
+					<img class="weather-img" src="../public/images/duoyun.png" />
+					<span class="du">29℃/34℃</span>
+				</div>
+				<div class="recommend-weather-future-item">
+					<span class="date">09/27</span>
+					<img class="weather-img" src="../public/images/duoyun.png" />
+					<span class="du">29℃/34℃</span>
+				</div>
+			</div>
+			<a href="#" onfocus="addFocus('#recommend-weather')" onblur="removeFocus('#recommend-weather')"><img src="../public/images/dot.gif" /></a>
+		</div>
+		<div class="recommend-slide">
+			<ul class="recommend-slide-ul">
+				<li class="recommend-slide-list">
+					<img class="recommend-slide-list-img" src="../uploads/image2.png" />
+					<p class="recommend-slide-description">高温环境对人体是个严峻的考验每个人的热耐受能力也是不同的，研究表明获得或提高热耐受能</p>
+					<div class="recommend-slide-paly"></div>
+				</li>
+				<li class="recommend-slide-list">
+					<img class="recommend-slide-list-img" src="../uploads/image2.png" />
+					<p class="recommend-slide-description">123</p>
+					<div class="recommend-slide-paly"></div>
+				</li>
+			</ul>
+			<div class="recommend-slide-select">
+				<span></span>
+				<span></span>
+			</div>
+			<div id="con-slide" class="con-recommend-slide">
+				<a href="#" ><img src="../public/images/dot.gif" /></a>
+				<a href="#" ><img src="../public/images/dot.gif" /></a>
+			</div>
+		</div>
+		<div class="recommend-list">
+			<div id="recommend-item1" class="recommend-item">
+				<img class="recommend-item-img" src="../uploads/image1.png" />
+				<div class="recommend-item-title">气象新媒体</div>
+				<div class="recommend-item-mask"></div>
+				<a href="#" onfocus="addFocus('#recommend-item1')" onblur="removeFocus('#recommend-item1')"><img src="../public/images/dot.gif" /></a>
+			</div>
+			<div id="recommend-item2" class="recommend-item">
+				<img class="recommend-item-img" src="../uploads/image1.png" />
+				<div class="recommend-item-title">气象新媒体</div>
+				<div class="recommend-item-mask"></div>
+				<a href="#" onfocus="addFocus('#recommend-item2')" onblur="removeFocus('#recommend-item2')"><img src="../public/images/dot.gif" /></a>
+			</div>
+			<div id="recommend-item3" class="recommend-item">
+				<img class="recommend-item-img" src="../uploads/image1.png" />
+				<div class="recommend-item-title">气象新媒体</div>
+				<div class="recommend-item-mask"></div>
+				<a href="#" onfocus="addFocus('#recommend-item3')" onblur="removeFocus('#recommend-item3')"><img src="../public/images/dot.gif" /></a>
+			</div>
+			<div class="recommend-shadow"></div>
+		</div>
 	</div>
 	<div id="footer">
-		<span id="menu1" class="menu-1"></span>
-		<span id="menu2" class="menu-2"></span>
-		<span id="menu3" class="menu-3"></span>
-		<span id="menu4" class="menu-4"></span>
+		<div class="footer-menu">
+			<span id="menu1" class="menu-1"></span>
+			<span id="menu2" class="menu-2"></span>
+			<span id="menu3" class="menu-3"></span>
+			<span id="menu4" class="menu-4"></span>
+		</div>
 	</div>
-
 
 	<div id="controller">
 		<div class="con-header">
@@ -38,5 +111,6 @@
 	</div>
 
 	<script src="../public/js/common.js"></script>
+	<script src="../public/js/recommend.js"></script>
 </body>
 </html>
