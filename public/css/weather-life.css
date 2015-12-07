@@ -5,5 +5,117 @@
 	left: 80px;
 }
 .prev {
-	
+	/*display: none;*/
+	top: 186px;
+	left: -30px;
+}
+.next {
+	/*display: none;*/
+	top: 186px;
+	right: -30px;
+}
+.weather-life-item {
+	position: relative;
+	display: inline-block;
+	float: left;
+	margin: 0 20px;
+	width: 520px;
+	height: 236px;
+}
+.weather-life-item-inner {
+	position: absolute;
+	width: 100%;
+	height: 180px;
+}
+.weather-life-item-inner a {
+	display: inline-block;
+	width: 100%;
+}
+.weather-life-item-inner:before {
+	display: none;
+	position: absolute;
+	content: "";
+	top: -15px;
+	left: -15px;
+	width: 550px;
+	height: 210px;
+	background: url('../images/weather-life-item-border.png') no-repeat;
+	z-index: 9;
+}
+.weather-life-item.focus .weather-life-item-inner:before {
+	display: block;
+}
+.weather-life-inner-left {
+	display: inline-block;
+	float: left;
+	position: relative;
+	width: 260px;
+	height: 180px;
+}
+.weather-life-item-play {
+	display: none;
+	position: absolute;
+	top: 55px;
+	left: 96px;
+}
+.weather-life-item.focus .weather-life-item-play{
+	display: block;	
+}
+.weather-life-inner-left img {
+	width: 260px;
+	height: 180px;
+	border-top-left-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+	-webkit-border-top-left-radius: 0.5em;
+	-webkit-border-bottom-left-radius: 0.5em;
+}
+.weather-life-inner-right {
+	display: inline-block;
+	float: left;
+	width: 260px;
+	height: 180px;
+	background: url('../images/weather-life-item-bg.png');
+}
+.weather-life-item-title {
+	margin-top: 12px;
+	margin-left: 16px;
+	margin-right: 16px;
+	height: 60px;
+	font-size: 26px;
+	color: #ffffff;
+	font-weight: normal;
+	overflow: hidden;
+}
+.weather-life-item-text {
+	font-size: 22px;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-left: 16px;
+	margin-right: 16px;
+	line-height: 30px;
+	height: 90px;
+	overflow: hidden;
+}
+.weather-life-item-tag {
+	position: absolute;
+	top: 195px;
+	font-size: 24px;
+	color: #0a0a0a;
+}
+.weather-life-item-tag a {
+	color: #0a0a0a;
+}
+.weather-life-item-tag a:focus {
+	color: #ffaa00;
+}
+
+#controller .con-header, #controller .con-footer {
+	width: 1120px;
+	left: 80px;
+}
+#controller .con-header a {
+	width: 20%;
+}
+#controller .con-footer a {
+	width: 25%;
 }
