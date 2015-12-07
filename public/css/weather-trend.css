@@ -1,0 +1,79 @@
+.trend-container {
+    position: relative;
+    top: 111px;
+}
+.trend-content{
+	position: absolute;
+	top:0;
+	left:50px;
+}
+.trend-content .text{
+	font-size: 34px;
+	display: block;
+	color: #000;
+}
+.text-border{
+    position: absolute;
+    top: 75px;
+    width: 206px;
+    height: 255px;
+    line-height: 85px;
+    text-align: center;
+}
+.text-border a:focus{
+	color: #f5a817;
+}
+.show-city{
+	position: absolute;
+	left:257px;
+	top:0;
+	text-indent: 38px;
+	height: 52px;
+	width: 500px;
+	font-size: 42px;
+	background: url(../images/icon-city.png) no-repeat;
+}
+.trend-day{
+	font-size: 28px;
+	text-align: center;
+
+}
+.list-container{
+	position: absolute;
+	top:75px;
+	left:206px;
+	width: 974px;
+	height:427px;
+	background: url(../images/list-bg.png) no-repeat;
+}
+.trend-content .trend .list{
+	width: 974px;
+	font-size: 0;
+}
+.trend-content .trend .list li{
+	position: relative;
+    text-align: center;
+    margin-top: 38px;
+    font-size: 28px;
+    width: 105px;
+    height: 363px;
+    margin-right: 15px;
+    margin-left: 65px;
+}
+.trend-weather{
+	text-align: center;
+	font-size: 30px;
+}
+.min-temp ,.max-temp{
+position: absolute;
+bottom: 0;
+width: 50px;
+text-align: center;
+}
+.min-temp {
+	background: url(../images/min-temp.png);
+}
+.max-temp {
+	margin-left: 50px;
+	background: url(../images/max-temp.png);
+}
