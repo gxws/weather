@@ -6,14 +6,17 @@
 	<link rel="stylesheet" href="../public/css/detail.css">
 	<link rel="stylesheet" href="../public/css/common.css">
 </head>
-<body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
+<body style="background: url('../public/images/bg-sunny.jpg') no-repeat;">
 	<div class="detail-container">
 		<div class="detail-content"> 
 			<div class="show-city">南宁</div>
 			<div class="text-border">
-				<a id="local-county"class="text" href="#">县级</a>
-				<a class="text" href="#">趋势</a>
-				<a class="text" href="#">指数</a>
+				<!-- <a id="local-county"class="bg-county disp" href="#"></a>
+				<a class="bg-trend disp" href="#"></a>
+				<a class="bg-expon disp" href="#"></a> -->
+				<span id="bg-county"class="bg-county disp active" href="#"></span>
+				<span id="bg-trend"class="bg-trend disp" href="#"></span>
+				<span id="bg-expon"class="bg-expon disp" href="#"></span>
 			</div>
 			<div class="county">
 				<div class="list-container">
@@ -21,74 +24,74 @@
 						<li >
 							<div class="show-county">武鸣</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li>
 							<div class="show-county">隆安</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li>
 							<div class="show-county">马山</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li>
 							<div class="show-county">上林</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li>
 							<div class="show-county">宾阳</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li >
 							<div class="show-county">横县</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li >
 							<div class="show-county">武鸣</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li>
 							<div class="show-county">隆安</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li>
 							<div class="show-county">马山</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li>
 							<div class="show-county">上林</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li>
 							<div class="show-county">宾阳</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 						<li >
 							<div class="show-county">横县</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="">多云转阵雨</div>
-							<div class="">20℃/38℃</div>
+							<div class="change">多云转阵雨</div>
+							<div class="temper">20℃/38℃</div>
 						</li>
 					</ul>
 				</div>
@@ -103,15 +106,14 @@
 			<span id="menu4" class="menu-4"></span>
 		</div>
 	</div>
-
-
 	<div id="controller">
-		<div class="con-header">
-			<a href="#" onfocus="addFocus('#nav1')" onblur="removeFocus('#nav1')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav2')" onblur="removeFocus('#nav2')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav3')" onblur="removeFocus('#nav3')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav4')" onblur="removeFocus('#nav4')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav5')" onblur="removeFocus('#nav5')"><img src="../public/images/dot.gif" /></a>
+		<div class="con-detail">
+			<a href="#" onfocus="addFocus('#bg-county')" onblur="removeFocus('#bg-county')">
+				<img src="../public/images/dot.gif" /></a>
+			<a href="#" onfocus="addFocus('#bg-trend')" onblur="removeFocus('#bg-trend')">
+				<img src="../public/images/dot.gif" /></a>
+			<a href="#" onfocus="addFocus('#bg-expon')" onblur="removeFocus('#bg-expon')">
+				<img src="../public/images/dot.gif" /></a>
 		</div>
 		<div class="con-footer">
 			<a href="#" onfocus="addFocus('#menu1')" onblur="removeFocus('#menu1')"><img src="../public/images/dot.gif" /></a>
@@ -123,7 +125,7 @@
 
 	<script src="../public/js/common.js"></script>
 	<script >
-	var localCounty=document.getElementById('local-county');
+	var localCounty=document.getElementById('bg-county');
 	localCounty.focus();
 	// localCounty.innerHTML='县级'+' '+'&lt';
 	// function HTML(id,text){

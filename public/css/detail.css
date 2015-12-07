@@ -1,5 +1,5 @@
 .detail-container {
-    position: relative;
+    position: absolute;
     top: 111px;
 }
 .detail-content{
@@ -7,10 +7,43 @@
 	top:0;
 	left:50px;
 }
-.detail-content .text{
-	font-size: 34px;
+.detail-content .disp{
 	display: block;
-	color: #000;
+	float: right;
+	margin-top: 45px;s
+}
+.detail-content .bg-county,.bg-trend,.bg-expon{
+	width: 135px;
+	height: 35px;
+}
+.detail-content .bg-county{
+	background: url(../images/county.png) no-repeat;
+}
+.detail-content .bg-trend{
+	background: url(../images/trend.png) no-repeat;
+}
+.detail-content .bg-expon{
+	background: url(../images/expon.png) no-repeat;
+}
+.detail-content .bg-county.focus{
+	width: 135px;
+    height: 35px;
+	background: url(../images/hover-county.png) no-repeat;
+}
+.detail-content .bg-county.active{
+	width: 135px;
+    height: 35px;
+	background: url(../images/focus-county.png) no-repeat;
+}
+.detail-content .bg-trend.focus{
+	width: 135px;
+    height: 35px;
+	background: url(../images/hover-trend.png) no-repeat;
+}
+.detail-content .bg-expon.focus{
+	width: 135px;
+    height: 35px;
+	background: url(../images/hover-expon.png) no-repeat;
 }
 .text-border{
     position: absolute;
@@ -20,14 +53,11 @@
     line-height: 85px;
     text-align: center;
 }
-.text-border a:focus{
-	color: #f5a817;
-}
 .show-city{
 	position: absolute;
-	left:257px;
+	left:206px;
 	top:0;
-	text-indent: 38px;
+	padding-left: 38px;
 	height: 52px;
 	width: 500px;
 	font-size: 42px;
@@ -40,7 +70,7 @@
 }
 .list-container{
 	position: absolute;
-	top:75px;
+	top: 53px;
 	left:206px;
 	width: 974px;
 	height:427px;
@@ -49,15 +79,17 @@
 .detail-content .county .list{
 	width: 940px;
 	margin-left: 35px;
-/*	margin-right: 35px;*/
 	font-size: 28px;
-/*	text-align: center;*/
-	float: left;
-	
+    margin-bottom: 30px;
 }
 .detail-content .county .list li{
 	position: relative;
-    padding-top:38px;
     font-size: 22px;
+    text-align: center;
     margin-right: 35px;
+    margin-top: 30px;
+}
+.list-container .list  .change,.temper{
+	overflow: hidden;
+	line-height: 27px;
 }
