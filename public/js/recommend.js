@@ -19,9 +19,12 @@ function slider(){
 				tab_content[i].style.display = 'none';
 				tablist[i].className = '';
 			}
+			if(this.getAttribute('video') !== null){
+				console.log(1);
+				tab_content[index].className += ' focus';
+			}
 			tab_content[index].style.display = 'block';
 			tablist[index].className = 'focus';
-			tab_content[index].className += ' focus';
 			curr = index;
 
 			this.onkeydown = function(e){
@@ -39,9 +42,11 @@ function slider(){
 			}
 		};
 		element.onblur = function(){
-			var reg = new RegExp("\\sfocus", "g");
-			///\sfocus/g
-			tab_content[index].className = tab_content[index].className.replace(reg, "");
+			if(this.getAttribute('video') !== null){
+				var reg = new RegExp("\\sfocus", "g");
+				///\sfocus/g
+				tab_content[index].className = tab_content[index].className.replace(reg, "");
+			}
 		};
 	});
 	tab_content[0].style.display = 'block';

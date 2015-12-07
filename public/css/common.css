@@ -140,3 +140,23 @@ li{
 	position: absolute;
 	bottom: 0;
 }
+/* 播放图标 */
+.icon-play {
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	background: url('../images/btn-play.png') no-repeat;
+}
+/* 翻页箭头图标 */
+.prev, .next {
+	display: inline-block;
+	position: absolute;
+	width: 25px;
+	height: 80px;
+}
+.prev {
+	background: url('../images/prev.png') no-repeat;
+}
+.next {
+	background: url('../images/next.png') no-repeat;
+}
