@@ -20,8 +20,16 @@
     line-height: 85px;
     text-align: center;
 }
-.text-border a:focus{
-	color: #f5a817;
+.con-footer{
+	width: 1000px;
+}
+.con-footer a{
+	display: inline-block;
+	position: relative;
+	left:100px;
+	width: 20%;
+	/*height:18px;
+	background: #000;*/
 }
 .show-city{
 	position: absolute;
@@ -96,23 +104,18 @@ text-align: center;
 .trend-content .bg-expon{
 	background: url(../images/expon.png) no-repeat;
 }
-.trend-content .bg-county.focus{
+.trend-content .bg-county:focus{
 	width: 135px;
     height: 35px;
-	background: url(../images/hover-county.png) no-repeat;
+	background: url(../images/focus-county.png) no-repeat;
 }
-.trend-content .bg-trend.focus{
-	width: 135px;
-    height: 35px;
-	background: url(../images/hover-trend.png) no-repeat;
-}
-.trend-content .bg-trend.active{
+.trend-content .bg-trend:focus{
 	width: 135px;
     height: 35px;
 	background: url(../images/focus-trend.png) no-repeat;
 }
-.trend-content .bg-expon.focus{
+.trend-content .bg-expon:focus{
 	width: 135px;
     height: 35px;
-	background: url(../images/hover-expon.png) no-repeat;
+	background: url(../images/focus-expon.png) no-repeat;
 }

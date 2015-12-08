@@ -25,25 +25,20 @@
 .detail-content .bg-expon{
 	background: url(../images/expon.png) no-repeat;
 }
-.detail-content .bg-county.focus{
-	width: 135px;
-    height: 35px;
-	background: url(../images/hover-county.png) no-repeat;
-}
-.detail-content .bg-county.active{
+.detail-content .bg-county:focus{
 	width: 135px;
     height: 35px;
 	background: url(../images/focus-county.png) no-repeat;
 }
-.detail-content .bg-trend.focus{
+.detail-content .bg-trend:focus{
 	width: 135px;
     height: 35px;
-	background: url(../images/hover-trend.png) no-repeat;
+	background: url(../images/focus-trend.png) no-repeat;
 }
-.detail-content .bg-expon.focus{
+.detail-content .bg-expon:focus{
 	width: 135px;
     height: 35px;
-	background: url(../images/hover-expon.png) no-repeat;
+	background: url(../images/focus-expon.png) no-repeat;
 }
 .text-border{
     position: absolute;
@@ -70,7 +65,7 @@
 }
 .list-container{
 	position: absolute;
-	top: 53px;
+	top: 50px;
 	left:206px;
 	width: 974px;
 	height:427px;
@@ -92,4 +87,15 @@
 .list-container .list  .change,.temper{
 	overflow: hidden;
 	line-height: 27px;
+}
+.con-footer{
+	width: 1000px;
+}
+.con-footer a{
+	display: inline-block;
+	position: relative;
+	left:100px;
+	width: 20%;
+	/*height:18px;
+	background: #000;*/
 }
