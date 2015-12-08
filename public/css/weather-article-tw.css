@@ -1,0 +1,65 @@
+.article-tw-container {
+	position: absolute;
+	width: 1090px;
+	top: 90px;
+	left: 92px;
+}
+.article-tw-title {
+	font-size: 38px;
+	color: #000000;
+	font-weight: normal;
+	height: 43px;
+	overflow: hidden;
+}
+.article-tw-content {
+	position: absolute;
+	top: 56px;
+	width: 1090px;
+	height: 450px;
+	background: url('../images/article-tw-content-bg.png');
+}
+.article-tw-content-img {
+	margin-top: 15px;
+	margin-left: 20px;
+	width: 338px;
+	height: 420px;
+}
+
+.detail-inner {
+	position: absolute;
+	top: 15px;
+	left: 380px;
+	width: 710px;
+	height: 420px;
+	overflow: hidden;
+}
+.detail-inner .content {
+	position: absolute;
+	width: 650px;
+	font-size: 26px;
+	color: #000000;
+	line-height: 38px;
+}
+.detail-inner .scrollbar {
+	position: absolute;
+    top: 0;
+    right: 7px;
+    width: 30px;
+    height: 420px;
+    display: none;
+    /* border: 1px solid red; */
+}
+.detail-inner .scrollbar .scroll-gb {
+	margin: 0 auto;
+    width: 2px;
+    height: 100%;
+    background: #5093c9;
+}
+.detail-inner .scrollbar .scroll-btn {
+	position: absolute;
+    top: 0;
+    margin-left: 8px;
+    width: 15px;
+    height: 0;
+    background-color: #4189c3;
+}

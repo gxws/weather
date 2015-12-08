@@ -1,0 +1,83 @@
+.article-video-container {
+	position: absolute;
+	top: 64px;
+}
+.article-video-img {
+	position: absolute;
+	left: 119px;
+	width: 230px;
+	height: 340px;
+}
+.article-video-title {
+	position: absolute;
+	left: 382px;
+	font-size: 38px;
+	font-weight: normal;
+	color: #0a0a0a;
+	width: 770px;
+	height: 43px;
+	overflow: hidden;
+}
+.article-video-text {
+	position: absolute;
+	top: 67px;
+	left: 382px;
+	font-size: 26px;
+	color: #000000;
+	text-indent: 2em;
+	line-height: 40px;
+	width: 770px;
+	height: 280px;
+	overflow: hidden;
+}
+.article-video-list {
+	position: absolute;
+	top: 408px;
+	left: 50px;
+	width: 1180px;
+}
+.article-video-list .prev {
+	top: 22px;
+	left: 0;
+}
+.article-video-list .next {
+	top: 22px;
+	right: 0;
+}
+.article-video-table {
+	position: absolute;
+	left: 49px;
+	border-collapse: collapse;
+	border: 0;
+}
+.article-video-table tr {
+	display: block;
+	margin-bottom: 12px;
+}
+.article-video-table td {
+	border: 1px solid #8c8c8c;
+}
+.article-video-table td a {
+	display: inline-block;
+	width: 71px;
+	height: 54px;
+	line-height: 54px;
+	text-align: center;
+	font-size: 22px;
+	color: #0a0a0a;
+}
+.article-video-table .focus {
+	background-color: #ffb219;
+	border-color: #ffb219;
+}
+.article-video-table .focus a {
+	color: #ffffff;
+}
+
+#controller .con-footer {
+	width: 1082px;
+	left: 99px;
+}
+#controller .con-footer a {
+	width: 25%;
+}
