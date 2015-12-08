@@ -47,17 +47,20 @@
 	content: "";
 	position: absolute;
 	width: 112px;
-	height: 43px;
+	height: 45px;
 	z-index: 1;
     top: 30px;
 }
 .product-container .open-price-1::before{
+	left:257px;
 	background: url(../images/month-1.png)center center no-repeat;
 }
 .product-container .open-price-3::before{
+	left:587px;
 	background: url(../images/month-3.png) center center no-repeat; 
 }
 .product-container .open-price-6::before{
+	left:916px;
 	background: url(../images/month-6.png) center center no-repeat; 
 }
 .product-container .open-price-1:focus,
@@ -73,6 +76,4 @@
 #controller .con-footer a{
 	width: 20%;
 	margin-left:5px;
-	background: #000;
-	height: 10px;
 }
