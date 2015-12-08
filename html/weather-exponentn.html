@@ -3,65 +3,70 @@
 <head>
 	<meta charset="UTF-8">
 	<title>天气详情-指数</title>
-	<link rel="stylesheet" href="../public/css/weather-trend.css">
+	<link rel="stylesheet" href="../public/css/weather-expon.css">
 	<link rel="stylesheet" href="../public/css/common.css">
 </head>
 <body style="background: url('../public/images/bg-rain.jpg') no-repeat;">
-	<div class="trend-container">
-		<div class="trend-content"> 
+	<div class="expon-container">
+		<div class="expon-content"> 
 			<div class="show-city">南宁</div>
 			<div class="text-border">
-				<a id="local-trend"class="text" href="#">县级</a>
-				<a class="text" href="#">趋势</a>
-				<a class="text" href="#">指数</a>
+				<span id="bg-county"class="bg-county disp" href="#"></span>
+				<span id="bg-trend"class="bg-trend disp " href="#"></span>
+				<span id="bg-expon"class="bg-expon disp active" href="#"></span>
 			</div>
-			<div class="trend">
+			<div class="expon">
 				<div class="list-container">
 					<ul class="list">
 						<li>
-							<div class="trend-day">9/28</div>
-							<img src="../public/images/yin.png"style="width:88px ;height:74px;">
-							<div class="trend-weather">阴</div>
-							<div>
-								<div class="min-temp" style="height:40px;">20°</div>
-								<div class="max-temp" style="height:200px;">40°</div>
-							</div>
+							<img src="../public/images/ex-quality.png"style="width:110px ;height:64px;">
+							<div class="expon-weather">空气质量</div>
+							<div class="situation">良好</div>
 						</li>
 						<li>
-							<div class="trend-day">9/28</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="trend-weather">多云</div>
-							<div>
-								<div class="min-temp" style="height:40px;"> 20°</div>
-								<div class="max-temp" style="height:200px;"> 40°</div>
-							</div>
+							<img src="../public/images/ex-wind.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">风向</div>
+							<div class="situation">北风3级</div>
 						</li>
 						<li>
-							<div class="trend-day">9/28</div>
-							<img src="../public/images/zhenyu.png"style="width:88px ;height:74px;">
-							<div class="trend-weather">阵雨</div>
-							<div>
-								<div class="min-temp" style="height:40px;">20°</div>
-								<div class="max-temp" style="height:200px;">40°</div>
-							</div>
+							<img src="../public/images/ex-rays.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">紫外线</div>
+							<div class="situation">较强</div>
 						</li>
 						<li>
-							<div class="trend-day">9/28</div>
-							<img src="../public/images/zhenyu.png"style="width:88px ;height:74px;">
-							<div class="trend-weather">阵雨</div>
-							<div>
-								<div class="min-temp" style="height:40px;">20°</div>
-								<div class="max-temp" style="height:200px;">40°</div>
-							</div>
+							<img src="../public/images/ex-start .png"style="width:100px ;height:64px;">
+							<div class="expon-weather">日出时间</div>
+							<div class="situation">5:55</div>
 						</li>
 						<li>
-							<div class="trend-day">9/28</div>
-							<img src="../public/images/sunny.png"style="width:88px ;height:74px;">
-							<div class="trend-weather">晴</div>
-							<div>
-								<div class="min-temp" style="height:40px;">20°</div>
-								<div class="max-temp" style="height:200px;">40°</div>
-							</div>
+							<img src="../public/images/ex-end.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">日落时间</div>
+							<div class="situation">18:02</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-comfort.png"style="width:110px ;height:64px;">
+							<div class="expon-weather">穿衣</div>
+							<div class="situation">清爽</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-outdoor.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">出行</div>
+							<div class="situation">适宜</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-dress.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">湿度</div>
+							<div class="situation">干爽</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-go-out.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">日出时间</div>
+							<div class="situation">5:55</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-humidity.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">日落时间</div>
+							<div class="situation">18:02</div>
 						</li>
 					</ul>
 				</div>
@@ -76,15 +81,14 @@
 			<span id="menu4" class="menu-4"></span>
 		</div>
 	</div>
-
-
 	<div id="controller">
-		<div class="con-header">
-			<a href="#" onfocus="addFocus('#nav1')" onblur="removeFocus('#nav1')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav2')" onblur="removeFocus('#nav2')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav3')" onblur="removeFocus('#nav3')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav4')" onblur="removeFocus('#nav4')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav5')" onblur="removeFocus('#nav5')"><img src="../public/images/dot.gif" /></a>
+		<div class="con-detail">S
+			<a href="#" onfocus="addFocus('#bg-county')" onblur="removeFocus('#bg-county')">
+				<img src="../public/images/dot.gif" /></a>
+			<a href="#" onfocus="addFocus('#bg-trend')" onblur="removeFocus('#bg-trend')">
+				<img src="../public/images/dot.gif" /></a>
+			<a href="#" onfocus="addFocus('#bg-expon')" onblur="removeFocus('#bg-expon')">
+				<img src="../public/images/dot.gif" /></a>
 		</div>
 		<div class="con-footer">
 			<a href="#" onfocus="addFocus('#menu1')" onblur="removeFocus('#menu1')"><img src="../public/images/dot.gif" /></a>
