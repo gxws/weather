@@ -1,0 +1,116 @@
+.article-container {
+	position: absolute;
+	width: 100%;
+	top: 90px;
+}
+.article-title {
+	position: absolute;
+	left: 120px;
+	width: 1040px;
+	height: 48px;
+	font-size: 42px;
+	font-weight: normal;
+	color: #000000;
+	overflow: hidden;
+}
+.article-text {
+	position: absolute;
+	top: 60px;
+	left: 120px;
+	width: 1040px;
+	height: 240px;
+	text-indent: 2em;
+	font-size: 26px;
+	color: #000000;
+	line-height: 40px;
+	overflow: hidden;
+}
+.article-video {
+	position: absolute;
+	top: 342px;
+	left: 102px;
+	width: 1082px;
+}
+.article-video .prev {
+	top: 41px;
+	left: -50px;
+}
+.article-video .next {
+	top: 41px;
+	right: -50px;
+}
+.article-list {
+	float: left;
+	display: inline-block;
+	position: relative;
+	margin: 0 10px;
+	width: 248px;
+	height: 160px;
+}
+.article-list:focus:before {
+	position: absolute;
+	content: "";
+	top: -15px;
+	left: -15px;
+	width: 278px;
+	height: 190px;
+	background: url('../images/article-list-border.png');
+	z-index: 9;
+}
+.article-list:focus .article-list-play {
+	display: block;
+}
+.article-list-play {
+	display: none;
+	position: absolute;
+	top: 28px;
+	left: 92px;
+	width: 65px;
+	height: 65px;
+	background: url('../images/icon-play.png');
+	z-index: 9;
+}
+.article-list img {
+	width: 248px;
+	height: 160px;
+	-webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+.article-list-title {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 41px;
+	line-height: 41px;
+	font-size: 26px;
+	color: #ffffff;
+	text-align: center;
+	z-index: 9;
+}
+.article-list-mask {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 41px;
+	-webkit-border-bottom-left-radius: 0.5em;
+	-webkit-border-bottom-right-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	background: url('../images/article-list-mask.png') repeat-x;
+}
+.article-list-shadow {
+	position: absolute;
+	width: 248px;
+	height: 41px;
+	bottom: -41px;
+	background: url('../images/article-list-shadow.png');
+}
+
+
+#controller .con-footer {
+	width: 1082px;
+	left: 102px;
+}
+#controller .con-footer a {
+	width: 25%;
+}
