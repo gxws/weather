@@ -1,0 +1,126 @@
+.city-container {
+	position: absolute;
+	top:48px;
+	left:100px;
+	width: 1080px;
+}
+.city-container .column{
+    height: 81px;
+    line-height: 81px;
+	font-size: 42px;
+	color: #195b90;
+}
+.city-content{
+	position: absolute;
+	top:102px;
+	left:-8px;
+    font-size: 0;
+    width: 1185px;
+    /*text-align: center;*/
+}
+.btn-city{
+    position: relative;
+	display: inline-block;
+	width: 220px;
+	height: 130px;
+	font-size: 0;
+	background: url(../images/btn-city.png) no-repeat;
+}
+.btn-city:focus:before{
+	content: "";
+	position: absolute;
+	width: 220px;
+	height: 130px;
+	background: url(../images/focus-btn-city.png);
+}
+.icon-nn,
+.icon-lz,
+.icon-gl,.icon-wz,.icon-bh,
+.icon-fcg,.icon-qz,
+.icon-gg,.icon-yl,.icon-bs,.icon-hz,.icon-hc,
+.icon-lb,.icon-cz{
+	position: absolute;
+	width: 75px;
+	height: 30px;
+	top: 49px;
+	left:72px;
+}
+.icon-nn{
+	background: url(../images/icon-nn.png) no-repeat;
+}
+.icon-qz{
+	background: url(../images/icon-qz.png) no-repeat;
+}
+.icon-lz{
+	background: url(../images/icon-lz.png) no-repeat;
+}
+.icon-gl{
+	background: url(../images/icon-gl.png) no-repeat;
+}
+.icon-bh{
+	background: url(../images/icon-bh.png) no-repeat;
+}
+.icon-fcg{
+	width: 95px;
+	left: 60px;
+	background: url(../images/icon-fcg.png) no-repeat;
+}
+.icon-gg{
+	background: url(../images/icon-gg.png) no-repeat;
+}
+.icon-yl{
+	background: url(../images/icon-yl.png) no-repeat;
+}
+.icon-hz{
+	background: url(../images/icon-hz.png) no-repeat;
+}
+.icon-hc{
+	background: url(../images/icon-hc.png) no-repeat;
+}
+.icon-lb{
+	background: url(../images/icon-lb.png) no-repeat;
+}
+.icon-cz{
+	background: url(../images/icon-cz.png) no-repeat;
+}
+.icon-wz{
+	background: url(../images/icon-wz.png) no-repeat;
+}
+.icon-bs{
+	background: url(../images/icon-bs.png) no-repeat;
+}
+.index-position,.index-city{
+	font-size: 26px;
+    line-height: 48px;
+	color: #ffffff;
+    width: 100%;
+    text-align: center;
+    top: 64px;
+    position: absolute;
+}
+.index-position{
+	
+}
+.index-city{
+	position: absolute;
+}
+#controller .con-footer{
+	width: 1000px;
+	position: absolute;
+	left:272px;
+}
+#controller .con-footer a:first-child{
+	width: 28%;
+}
+#controller .con-footer a{
+	width: 10%;
+	margin-left:5px;
+}
+#controller .con-footer a:last-child{
+	width: 30%;
+}
+.border .food-list .food-border a{
+	width: 360px;
+	display: inline-block;
+
+}
