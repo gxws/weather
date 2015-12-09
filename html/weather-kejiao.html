@@ -6,80 +6,134 @@
 	<link rel="stylesheet" href="../public/css/common.css" />
 	<link rel="stylesheet" href="../public/css/weather-life.css" />
 	<link rel="stylesheet" href="../public/css/weather-kejiao.css" />
+	<script src="../public/js/template.js"></script>
 </head>
 <body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
-	<div id="header">
-		<div class="header-nav">
-			<span id="nav1" class="nav-1"></span>
-			<span id="nav2" class="nav-2"></span>
-			<span id="nav3" class="nav-3"></span>
-			<span id="nav4" class="nav-4 active"></span>
-			<span id="nav5" class="nav-5"></span>
-		</div>
-	</div>
-	<div class="weather-life-container">
-		<div class="prev"></div>
-		<div class="weather-life-body">
-			<div id="weather-life-item1" class="weather-life-item">
-				<div class="weather-kejiao-box">
-					<img src="../uploads/image4.png" />
-					<div class="title">荒野求生-第二季</div>
-					<div class="mask"></div>
-					<a href="#" onfocus="addFocus('#weather-life-item1')" onblur="removeFocus('#weather-life-item1')"><img src="../public/images/dot.gif" /></a>
-				</div>
-			</div>
-			<div id="weather-life-item2" class="weather-life-item">
-				<div class="weather-kejiao-box">
-					<img src="../uploads/image4.png" />
-					<div class="title">荒野求生-第二季</div>
-					<div class="mask"></div>
-					<a href="#" onfocus="addFocus('#weather-life-item2')" onblur="removeFocus('#weather-life-item2')"><img src="../public/images/dot.gif" /></a>
-				</div>
-			</div>
-			<div id="weather-life-item3" class="weather-life-item">
-				<div class="weather-kejiao-box">
-					<img src="../uploads/image4.png" />
-					<div class="title">荒野求生-第二季</div>
-					<div class="mask"></div>
-					<div class="weather-kejiao-box-bg"></div>
-					<a href="#" onfocus="addFocus('#weather-life-item3')" onblur="removeFocus('#weather-life-item3')"><img src="../public/images/dot.gif" /></a>
-				</div>
-			</div>
-			<div id="weather-life-item4" class="weather-life-item">
-				<div class="weather-kejiao-box">
-					<img src="../uploads/image4.png" />
-					<div class="title">荒野求生-第二季</div>
-					<div class="mask"></div>
-					<div class="weather-kejiao-box-bg"></div>
-					<a href="#" onfocus="addFocus('#weather-life-item4')" onblur="removeFocus('#weather-life-item4')"><img src="../public/images/dot.gif" /></a>
-				</div>
-			</div>
-		</div>
-		<div class="next"></div>
-	</div>
-	<div id="footer">
-		<div class="footer-menu">
-			<span id="menu1" class="menu-1"></span>
-			<span id="menu2" class="menu-2"></span>
-			<span id="menu3" class="menu-3"></span>
-			<span id="menu4" class="menu-4"></span>
-		</div>
-	</div>
-	<div id="controller">
-		<div class="con-header">
-			<a href="#" onfocus="addFocus('#nav1')" onblur="removeFocus('#nav1')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav2')" onblur="removeFocus('#nav2')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav3')" onblur="removeFocus('#nav3')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav4')" onblur="removeFocus('#nav4')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav5')" onblur="removeFocus('#nav5')"><img src="../public/images/dot.gif" /></a>
-		</div>
-		<div class="con-footer">
-			<a href="#" onfocus="addFocus('#menu1')" onblur="removeFocus('#menu1')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu2')" onblur="removeFocus('#menu2')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu3')" onblur="removeFocus('#menu3')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu4')" onblur="removeFocus('#menu4')"><img src="../public/images/dot.gif" /></a>
-		</div>
-	</div>
+	<div id="root"></div>
 	<script src="../public/js/common.js"></script>
+	<script src="../public/js/pagination.js"></script>
+	<script id="templateId" type="text/html">
+		<div id="header">
+			<div class="header-nav">
+				{{each headers as v i}}
+					<span id="nav{{i+1}}" class="nav-{{i+1}} {{if v.active}}active{{/if}}"></span>
+				{{/each}}
+			</div>
+		</div>
+		<div class="weather-life-container">
+			<div class="prev"></div>
+			<div id="listTpl" class="weather-life-body"></div>
+			<div class="next"></div>
+		</div>
+		<div id="footer">
+			<div class="footer-menu">
+				<span id="menu1" class="menu-1"></span>
+				<span id="menu2" class="menu-2"></span>
+				<span id="menu3" class="menu-3"></span>
+				<span id="menu4" class="menu-4"></span>
+			</div>
+		</div>
+		<div id="controller">
+			<div class="con-header">
+				{{each headers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#nav{{i+1}}')" onblur="removeFocus('#nav{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+			<div class="con-footer">
+				{{each footers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#menu{{i+1}}')" onblur="removeFocus('#menu{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+		</div>
+	</script>
+	<script id="list" type="text/html">
+		{{each list as v i}}
+			<div id="weather-life-item{{i}}" class="weather-life-item">
+				<div class="weather-kejiao-box">
+					<img src="{{v.img | defaultImg: '../public/images/default/default4.png'}}" />
+					<div class="title">{{v.title}}</div>
+					<div class="mask"></div>
+					{{if i > 1}}
+						<div class="weather-kejiao-box-bg"></div>
+					{{/if}}
+					<a class="A" href="{{v.href}}" onfocus="addFocus('#weather-life-item{{i}}')" onblur="removeFocus('#weather-life-item{{i}}')"><img src="../public/images/dot.gif" /></a>
+				</div>
+			</div>
+		{{/each}}
+	</script>
+	<script type="text/javascript">
+		var data = {
+			headers: [{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: true
+			},{
+				href: "#",
+				active: false
+			}],
+			footers: [{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			}],
+			lists: [{
+				img: "../uploads/image4.png",
+				title: "荒野求生-第二季",
+				href: "#"
+			},{
+				img: "",
+				title: "荒野求生-第三季",
+				href: "#"
+			},{
+				img: "../uploads/image4.png",
+				title: "荒野求生-第二季",
+				href: "#"
+			},{
+				img: "",
+				title: "荒野求生-第三季",
+				href: "#"
+			},{
+				img: "../uploads/image4.png",
+				title: "荒野求生-第二季",
+				href: "#"
+			},{
+				img: "",
+				title: "荒野求生-第三季",
+				href: "#"
+			},{
+				img: "../uploads/image4.png",
+				title: "荒野求生-第二季",
+				href: "#"
+			},{
+				img: "",
+				title: "荒野求生-第三季",
+				href: "#"
+			}]
+		};
+	
+		var html = template('templateId', data);
+		document.getElementById('root').innerHTML = html;
+
+		pagination({
+			template_id: "list",
+			container_id: "listTpl",
+			size: 4,
+			row: 2,
+			total: 8,
+			items: data.lists
+		});
+	</script>
 </body>
 </html>

@@ -1,13 +1,10 @@
 (function() {
     "use strict";
-
+    console.log('简简单单的封装个分页插件，用法看源码，如确实看不懂 请联系我 %s-%s', '刚跌倒', 'gangdiedao@sina.cn');
     var root = this;
 
     template.helper('defaultImg', function(img, defimg) {
         var defimg = defimg;
-        if (!defimg) {
-            defimg = '../public/images/car-default.jpg';
-        }
         if (!img) {
             img = defimg;
         }
@@ -52,7 +49,8 @@
             size: 4, //每页显示个数
             total: 1, //总记录数
             row: 4, //每行个数 用来做翻页控制
-            items: [] //数据
+            items: [], //数据
+            callback: "" //回调函数
         };
         var param = defaults;
         for (var key in options) {
@@ -77,7 +75,7 @@
             }
             var html = template(param.template_id, data);
             document.getElementById(param.container_id).innerHTML = html;
-
+            param.callback();
 
             if (pages === 1) {
                 prev.style.display = "none";
@@ -93,7 +91,7 @@
                 next.style.display = "block";
             }
 
-            var nodelist = document.querySelectorAll('#' + param.container_id + ' a') || [];
+            var nodelist = document.querySelectorAll('#' + param.container_id + ' .A') || [];
             nodelist = Array.prototype.slice.call(nodelist);
             // nodelist[0].focus();
             nodelist.forEach(function(element, index) {
