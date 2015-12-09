@@ -3,20 +3,22 @@
 	top:48px;
 	left:100px;
 	width: 1080px;
+	display: inline-block;
 }
 .food-container .column{
     height: 81px;
     line-height: 81px;
+    display: inline-block;
 	font-size: 42px;
 	color: #195b90;
+	vertical-align: middle;
 }
 .food-container .subscribe{
-    position: absolute;
-    top: 0;
-    left: 82px;
+    position: relative;
     display: inline-block;
 	width: 186px;
 	height: 81px;
+	vertical-align: middle;
 	background: url(../images/btn-subscribe.png) no-repeat;
 }
 .food-container .subscribe:focus:after{

@@ -9,6 +9,7 @@
     line-height: 81px;
 	font-size: 42px;
 	color: #195b90;
+	overflow: hidden;
 }
 .city-content{
 	position: absolute;
@@ -33,19 +34,17 @@
 	height: 130px;
 	background: url(../images/focus-btn-city.png);
 }
-.icon-nn,
-.icon-lz,
-.icon-gl,.icon-wz,.icon-bh,
-.icon-fcg,.icon-qz,
-.icon-gg,.icon-yl,.icon-bs,.icon-hz,.icon-hc,
-.icon-lb,.icon-cz{
+.icon-nn,.icon-lz,.icon-gl,.icon-wz,.icon-bh,
+.icon-fcg,.icon-qz,.icon-gg,.icon-yl,.icon-bs,
+.icon-hz,.icon-hc,.icon-lb,.icon-cz{
 	position: absolute;
-	width: 75px;
-	height: 30px;
 	top: 49px;
-	left:72px;
+	width: 100%;
+    text-align: center;
+	font-size: 30px;
+	color:#ffffff;
 }
-.icon-nn{
+/*.icon-nn{
 	background: url(../images/icon-nn.png) no-repeat;
 }
 .icon-qz{
@@ -88,7 +87,7 @@
 }
 .icon-bs{
 	background: url(../images/icon-bs.png) no-repeat;
-}
+}*/
 .index-position,.index-city{
 	font-size: 26px;
     line-height: 48px;
