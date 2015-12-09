@@ -1,0 +1,67 @@
+.warning-container{
+	position: absolute;
+	top:85px;
+	left: 50px;
+	width: 100%;
+}
+.warning-container .title{
+	position: absolute;
+	left: 45px;
+	font-size: 36px;
+	color: #000000;
+}
+.warning-container .btn-home{
+	position: absolute;
+	top:533px;
+	left: 968px;
+	width: 186px;
+	height: 81px;
+	background: url(../images/btn-home.png) no-repeat;
+}
+.warning-container .btn-home:focus:after{
+	content: "";
+	position: absolute;
+	z-index: 1;
+	width: 186px;
+	height: 81px;
+	background: url(../images/focus-btn-home.png) no-repeat;
+}
+.warning-content{
+	position: absolute;
+	top:65px;
+	left:45px;
+	width: 1090px;
+	height: 450px;
+	background: url(../images/bg-border.png) no-repeat;
+}
+.warning-content .border{
+	padding: 32px;
+}
+.warning-content .prev,.warning-content .next{
+	position: absolute;
+	top:273px;
+	width: 26px;
+	height: 80px;
+}
+.warning-content .prev{
+	left: -45px;
+	background: url(../images/prev.png) no-repeat;
+}
+.warning-content .next{
+		right:-45px;
+		background: url(../images/next.png)no-repeat;
+}
+.warning-content .border .weather-content{
+	position: absolute;
+	left:532px;
+	top:32px;
+	display: inline-block;
+	font-size: 26px;
+	overflow: hidden;
+	width: 524px;
+	height: 386px;
+	line-height: 39px;
+}
+.warning-content .border .weather-content p{
+	text-indent: 2em;
+}

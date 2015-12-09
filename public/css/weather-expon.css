@@ -44,15 +44,16 @@
 	position: absolute;
 	top:53px;
 	left:206px;
-	width: 1000px;
+	width: 1135px;
 	height:427px;
 	background: url(../images/list-bg.png) no-repeat;
 }
-.expon-content .expon .list{
+.expon-content .expon .list-1{
     margin-left: 25px;
 	font-size: 0;
 }
-.expon-content .expon .list li{
+.expon-content .expon .list-1 li,
+.expon-content .expon .list-2 li{
 	position: relative;
     text-align: center;
     margin-top: 50px;
@@ -122,12 +123,9 @@ text-align: center;
 }
 .con-footer{
 	width: 1000px;
+	left:100px;
 }
 .con-footer a{
-	display: inline-block;
-	position: relative;
-	left:100px;
+	margin-right: 5px;
 	width: 20%;
-	/*height:18px;
-	background: #000;*/
-}
+}s
