@@ -44,24 +44,23 @@
 	position: absolute;
 	top:53px;
 	left:206px;
-	width: 974px;
+	width: 1000px;
 	height:427px;
 	background: url(../images/list-bg.png) no-repeat;
 }
 .expon-content .expon .list{
     margin-left: 25px;
-    margin-right: 3px;
 	font-size: 0;
 }
 .expon-content .expon .list li{
 	position: relative;
     text-align: center;
-    margin-top: 52px;
+    margin-top: 50px;
     font-size: 28px;
     overflow: hidden;
     width: 112px;
     height: 142px;
-    margin-right: 52px;
+    margin-right: 50px;
     margin-left: 25px;
 }
 .expon-weather{
@@ -106,23 +105,29 @@ text-align: center;
 .expon-content .bg-expon{
 	background: url(../images/expon.png) no-repeat;
 }
-.expon-content .bg-county.focus{
+.expon-content .bg-county:focus{
 	width: 135px;
     height: 35px;
-	background: url(../images/hover-county.png) no-repeat;
+	background: url(../images/focus-county.png) no-repeat;
 }
-.expon-content .bg-trend.focus{
+.expon-content .bg-trend:focus{
 	width: 135px;
     height: 35px;
-	background: url(../images/hover-trend.png) no-repeat;
+	background: url(../images/focus-trend.png) no-repeat;
 }
-.expon-content .bg-expon.focus{
-	width: 135px;
-    height: 35px;
-	background: url(../images/hover-expon.png) no-repeat;
-}
-.expon-content .bg-expon.active{
+.expon-content .bg-expon:focus{
 	width: 135px;
     height: 35px;
 	background: url(../images/focus-expon.png) no-repeat;
+}
+.con-footer{
+	width: 1000px;
+}
+.con-footer a{
+	display: inline-block;
+	position: relative;
+	left:100px;
+	width: 20%;
+	/*height:18px;
+	background: #000;*/
 }
