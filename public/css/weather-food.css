@@ -85,5 +85,13 @@
 .border .food-list .food-border a{
 	width: 360px;
 	display: inline-block;
-
+}
+.food-content .prev,.food-content .next{
+	top:203px;
+}
+.food-content .prev{
+	left:-36px;
+}
+.food-content .next{
+	right:65px;
 }
