@@ -1,0 +1,131 @@
+.subscript-nav {
+	position: absolute;
+	top: 64px;
+	left: 100px;
+}
+.subscript-nav-current {
+	display: inline-block;
+	position: absolute;
+	top: -25px;
+	left: -45px;
+	width: 216px;
+	height: 106px;
+	background: url('../images/subscript-current-default.png');
+}
+.subscript-nav-current.active {
+	background: url('../images/subscript-current.png');
+}
+.subscript-nav-current:focus {
+	background: url('../images/subscript-current-focus.png');
+}
+.subscript-nav-no {
+	display: inline-block;
+	position: absolute;
+	top: -25px;
+	left: 175px;
+	width: 216px;
+	height: 106px;
+	background: url('../images/subscript-no-default.png');
+}
+.subscript-nav-no.active {
+	background: url('../images/subscript-no.png');
+}
+.subscript-nav-no:focus {
+	background: url('../images/subscript-no-focus.png');
+}
+
+.subscript-container {
+	position: absolute;
+	width: 1108px;
+	top: 165px;
+	left: 86px;
+}
+.subscript-container .prev {
+	position: absolute;
+	top: 171px;
+	left: -36px;
+}
+.subscript-container .next {
+	position: absolute;
+	top: 171px;
+	right: -36px;
+}
+.subscript-list {
+	float: left;
+	display: inline-block;
+	position: relative;
+	margin: 0 13px 40px 13px;
+	width: 250px;
+	height: 190px;
+}
+.subscript-list:focus:before {
+	position: absolute;
+	content: "";
+	top: -15px;
+	left: -15px;
+	width: 280px;
+	height: 220px;
+	background: url('../images/subscript-list-border.png');
+	z-index: 9;
+}
+.subscript-list-img {
+	width: 250px;
+	height: 190px;
+	-webkit-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+.subscript-list-title {
+	position: absolute;
+	bottom: 0;
+	font-size: 36px;
+	color: #ffffff;
+	width: 100%;
+	height: 49px;
+	line-height: 49px;
+	text-align: center;
+	overflow: hidden;
+	z-index: 9;
+}
+.subscript-list-mask {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 49px;
+	-webkit-border-bottom-left-radius: 0.5em;
+	-webkit-border-bottom-right-radius: 0.5em;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	background: url('../images/subscript-list-mask.png') repeat-x;
+}
+.subscript-list-shadow {
+	position: absolute;
+	bottom: -49px;
+	width: 100%;
+	height: 49px;
+	background: url('../images/subscript-list-shadow.png');
+}
+
+.mysubscript .subscript-list:focus:before{
+	background: url('../images/unsubscript-border.png');
+}
+.mysubscript .subscript-list:focus .subscript-list-title, .mysubscript .subscript-list:focus .subscript-list-mask {
+	display: none;
+}
+.unsubscript .subscript-list:focus:before{
+	background: url('../images/subscription.png');
+}
+.unsubscript .subscript-list:focus .subscript-list-title, .unsubscript .subscript-list:focus .subscript-list-mask {
+	display: none;
+}
+
+
+#controller .con-header, #controller .con-footer {
+	width: 1108px;
+	left: 86px;
+}
+#controller .con-header a {
+	width: 20%;
+}
+#controller .con-footer a {
+	width: 25%;
+}
