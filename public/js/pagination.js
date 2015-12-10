@@ -74,8 +74,8 @@
                 "list": param.items.slice(start, start + param.size)
             }
             var html = template(param.template_id, data);
-            document.getElementById(param.container_id).innerHTML = html;
-            param.callback();
+            // document.getElementById(param.container_id).innerHTML = html;
+            if (param.callback) param.callback(html, data.list);
 
             if (pages === 1) {
                 prev.style.display = "none";

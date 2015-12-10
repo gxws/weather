@@ -106,7 +106,10 @@
 			size: 4,
 			row: 4,
 			total: 8,
-			items: data.lists
+			items: data.lists,
+			callback: function(text) {
+				document.getElementById('listTpl').innerHTML = text;
+			}
 		});
 	</script>
 </body>

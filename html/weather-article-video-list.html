@@ -227,7 +227,10 @@
 			row: 15,
 			total: 40,
 			items: data.lists,
-			callback: tableFocus
+			callback: function(text) {
+				document.getElementById('listTpl').innerHTML = text;
+				tableFocus();
+			}
 		});
 		function tableFocus(){
 			var talbeA = document.querySelectorAll('table a');

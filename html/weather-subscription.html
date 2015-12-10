@@ -5,101 +5,179 @@
 	<title>我的订阅</title>
 	<link rel="stylesheet" href="../public/css/common.css" />
 	<link rel="stylesheet" href="../public/css/weather-subscript.css" />
+	<script src="../public/js/template.js"></script>
 </head>
 <body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
-	<div id="header">
-		<div class="header-nav">
-			<span id="nav1" class="nav-1"></span>
-			<span id="nav2" class="nav-2"></span>
-			<span id="nav3" class="nav-3"></span>
-			<span id="nav4" class="nav-4"></span>
-			<span id="nav5" class="nav-5 active"></span>
-		</div>
-	</div>
-	<!-- 
-	用户当家订阅页面
-	<div class="subscript-nav">
-		<a class="subscript-nav-current active" href="#"></a>
-		<a class="subscript-nav-no" href="#"></a>
-	</div> 
-	-->
+	<div id="root"></div>
+	<!-- 			<a href="#" class="subscript-list">
+					<img class="subscript-list-img" src="../public/images/subscript-list-bg.png" />
+					<div class="subscript-list-shadow"></div>
+				</a> -->
 
-	<!-- 订阅 加 mysubscript -->
-	<!-- 未订阅 加 unsubscript -->
-	<div class="subscript-container">
-		<span class="prev"></span>
-		<a href="#" class="subscript-list">
-			<img class="subscript-list-img" src="../uploads/image8.png" />
-			<div class="subscript-list-title">养生</div>
-			<div class="subscript-list-mask"></div>
-			<!-- <div class="subscript-list-shadow"></div> -->
-		</a>
-		<a href="#" class="subscript-list">
-			<img class="subscript-list-img" src="../uploads/image8.png" />
-			<div class="subscript-list-title">养生</div>
-			<div class="subscript-list-mask"></div>
-			<!-- <div class="subscript-list-shadow"></div> -->
-		</a>
-		<a href="#" class="subscript-list">
-			<img class="subscript-list-img" src="../uploads/image8.png" />
-			<div class="subscript-list-title">养生</div>
-			<div class="subscript-list-mask"></div>
-			<!-- <div class="subscript-list-shadow"></div> -->
-		</a>
-		<a href="#" class="subscript-list">
-			<img class="subscript-list-img" src="../uploads/image8.png" />
-			<div class="subscript-list-title">养生</div>
-			<div class="subscript-list-mask"></div>
-			<!-- <div class="subscript-list-shadow"></div> -->
-		</a>
-		<a href="#" class="subscript-list">
-			<img class="subscript-list-img" src="../uploads/image8.png" />
-			<div class="subscript-list-title">养生</div>
-			<div class="subscript-list-mask"></div>
-			<div class="subscript-list-shadow"></div>
-		</a>
-		<a href="#" class="subscript-list">
-			<img class="subscript-list-img" src="../uploads/image8.png" />
-			<div class="subscript-list-title">养生</div>
-			<div class="subscript-list-mask"></div>
-			<div class="subscript-list-shadow"></div>
-		</a>
-		<a href="#" class="subscript-list">
-			<img class="subscript-list-img" src="../uploads/image8.png" />
-			<div class="subscript-list-title">养生</div>
-			<div class="subscript-list-mask"></div>
-			<div class="subscript-list-shadow"></div>
-		</a>
-		<a href="#" class="subscript-list">
-			<img class="subscript-list-img" src="../public/images/subscript-list-bg.png" />
-			<div class="subscript-list-shadow"></div>
-		</a>
-		<span class="next"></span>
-	</div>
-	<div id="footer">
-		<div class="footer-menu">
-			<span id="menu1" class="menu-1"></span>
-			<span id="menu2" class="menu-2"></span>
-			<span id="menu3" class="menu-3"></span>
-			<span id="menu4" class="menu-4"></span>
-		</div>
-	</div>
-
-	<div id="controller">
-		<div class="con-header">
-			<a href="#" onfocus="addFocus('#nav1')" onblur="removeFocus('#nav1')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav2')" onblur="removeFocus('#nav2')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav3')" onblur="removeFocus('#nav3')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav4')" onblur="removeFocus('#nav4')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav5')" onblur="removeFocus('#nav5')"><img src="../public/images/dot.gif" /></a>
-		</div>
-		<div class="con-footer">
-			<a href="#" onfocus="addFocus('#menu1')" onblur="removeFocus('#menu1')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu2')" onblur="removeFocus('#menu2')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu3')" onblur="removeFocus('#menu3')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu4')" onblur="removeFocus('#menu4')"><img src="../public/images/dot.gif" /></a>
-		</div>
-	</div>
 	<script src="../public/js/common.js"></script>
+	<script src="../public/js/pagination.js"></script>
+	<script id="templateId" type="text/html">
+		{{if headers && !nav}}
+			<div id="header">
+				<div class="header-nav">
+					{{each headers as v i}}
+						<span id="nav{{i+1}}" class="nav-{{i+1}} {{if v.active}}active{{/if}}"></span>
+					{{/each}}
+				</div>
+			</div>
+		{{/if}}
+		{{if nav}}
+			<div class="subscript-nav">
+				<a class="subscript-nav-current {{if nav === 1}}active{{/if}}" href="#"></a>
+				<a class="subscript-nav-no {{if nav === 2}}active{{/if}}" href="#"></a>
+			</div> 
+		{{/if}}
+
+		<div class="subscript-container {{if nav === 1}}mysubscript{{/if}}{{if nav === 2}}unsubscript{{/if}}">
+			<span class="prev"></span>
+			<div id="listTpl"></div>
+			<span class="next"></span>
+		</div>
+		<div id="footer">
+			<div class="footer-menu">
+				<span id="menu1" class="menu-1"></span>
+				<span id="menu2" class="menu-2"></span>
+				<span id="menu3" class="menu-3"></span>
+				<span id="menu4" class="menu-4"></span>
+			</div>
+		</div>
+
+		<div id="controller">
+			{{if headers && !nav}}
+				<div class="con-header">
+					{{each headers as v i}}
+						<a href="{{v.href}}" onfocus="addFocus('#nav{{i+1}}')" onblur="removeFocus('#nav{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+					{{/each}}
+				</div>
+			{{/if}}
+			<div class="con-footer">
+				{{each footers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#menu{{i+1}}')" onblur="removeFocus('#menu{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+		</div>
+	</script>
+	<script id="list" type="text/html">
+		{{each list as v i}}
+			<a href="{{v.href}}" class="subscript-list A">
+				<img class="subscript-list-img" src="{{v.img}}" />
+				<div class="subscript-list-title">{{v.title}}</div>
+				<div class="subscript-list-mask"></div>
+				{{if i > 3}}
+					<div class="subscript-list-shadow"></div>
+				{{/if}}
+			</a>
+		{{/each}}
+	</script>
+	<script type="text/javascript">
+		var data = {
+			headers: [{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: true
+			}],
+			footers: [{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			}],
+			nav: 2,
+			lists: [{
+				title: "养生1",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生2",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生3",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生4",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生5",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生6",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生7",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生1",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生2",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生3",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生4",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生5",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生6",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生7",
+				img: "../uploads/image8.png",
+				href: "#"
+			}]
+		};
+
+		var html = template('templateId', data);
+		document.getElementById('root').innerHTML = html;
+
+		pagination({
+			template_id: "list",
+			container_id: "listTpl",
+			size: 8,
+			row: 4,
+			total: 14,
+			items: data.lists,
+			callback: function(text, list){
+				if(data.headers && list.length < 7 && !data.nav){
+					text += '<a href="#" class="subscript-list"><img class="subscript-list-img" src="../public/images/subscript-list-bg.png" /><div class="subscript-list-shadow"></div></a>';
+				}
+				document.getElementById('listTpl').innerHTML = text;
+			}
+		});
+	</script>
 </body>
 </html>
