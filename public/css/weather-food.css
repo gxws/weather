@@ -1,0 +1,99 @@
+.food-container {
+	position: absolute;
+	top:48px;
+	left:100px;
+	width: 1080px;
+	display: inline-block;
+}
+.food-container .column{
+    height: 81px;
+    line-height: 81px;
+    display: inline-block;
+	font-size: 42px;
+	color: #195b90;
+	vertical-align: middle;
+}
+.food-container .subscribe{
+    position: relative;
+    display: inline-block;
+	width: 186px;
+	height: 81px;
+	vertical-align: middle;
+	background: url(../images/btn-subscribe.png) no-repeat;
+}
+.food-container .subscribe:focus:after{
+	content: "";
+	position: absolute;
+	width: 186px;
+	height: 81px;
+	background: url(../images/focus-btn-home.png) no-repeat;
+}
+.food-content{
+	position: absolute;
+	top:102px;
+	left:0;
+    font-size: 0;
+    width: 1180px;
+}
+.food-list{
+	display: inline-block;
+	width: 360px;
+	height: 485px;
+	background: url(../images/bg-food.png) no-repeat;
+}
+.food-list.focus:before{
+	content:"";
+	position: absolute;
+	width: 360px;
+	height: 485px;
+	z-index: 5;
+	background: url(../images/food-border.png) no-repeat;
+}
+.food-img{
+    margin-top: 15px;
+    margin-left: 14px;
+	width: 330px;
+	height: 230px;
+}
+
+.food-detail{
+	color:#fafafa;
+   	position: relative;
+    margin-left: 15px;
+   	width: 294px;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+.food-detail .food-title{   
+	font-size: 30px;
+	overflow: hidden;
+	height:80px;
+	line-height: 80px;
+
+}
+.food-detail .title-detail{
+	font-size: 24px;
+	line-height: 32px;
+}
+#controller .con-footer{
+	width: 1000px;
+	position: absolute;
+	left:272px;
+}
+#controller .con-footer a{
+	width: 20%;
+	margin-left:5px;
+}
+.border .food-list .food-border a{
+	width: 360px;
+	display: inline-block;
+}
+.food-content .prev,.food-content .next{
+	top:203px;
+}
+.food-content .prev{
+	left:-36px;
+}
+.food-content .next{
+	right:65px;
+}

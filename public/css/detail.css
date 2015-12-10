@@ -90,12 +90,9 @@
 }
 .con-footer{
 	width: 1000px;
+	left:100px;
 }
 .con-footer a{
-	display: inline-block;
-	position: relative;
-	left:100px;
+	margin-right: 5px;
 	width: 20%;
-	/*height:18px;
-	background: #000;*/
 }

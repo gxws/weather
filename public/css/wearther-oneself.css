@@ -1,0 +1,110 @@
+.oneself-container {
+	position: absolute;
+	top:48px;
+	left:100px;
+	width: 1080px;
+}
+.oneself-container .column{
+    height: 81px;
+    line-height: 81px;
+	font-size: 42px;
+	color: #195b90;
+}
+.oneself-content{
+	position: absolute;
+	top:102px;
+	left:32px;
+    font-size: 0;
+    width: 1020px;
+    text-align: center;
+}
+.oneself-content .border{
+	/*text-align: center;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.oneself-content .border .bg{
+	width: 310px;
+	height: 450px;
+    margin: 0 15px;
+	display: inline-block;
+	background: url(../images/oneself-border.png) no-repeat;
+}
+.oneself-content .border .oneself-city{
+	text-align: center;
+	position: absolute;
+	left: 15px;
+	top:0;
+}
+.oneself-content .border .oneself-set{
+	text-align: center;
+	position: absolute;
+	left: 355px;
+	top:0;
+}
+.oneself-content .border .oneself-product{
+	text-align: center;
+	position: absolute;
+	left: 690px;
+	top:0;
+}
+.oneself-content .border .oneself-city:before,
+.oneself-content .border .oneself-set:before,
+.oneself-content .border .oneself-product:before{
+	content: "";
+	position: absolute;
+	width: 180px;
+	height:135px;
+	top: 84px;
+	left:70px;
+}
+.oneself-content .border .oneself-city:before{
+	background: url(../images/icon-city-1.png);
+}
+.oneself-content .border .oneself-set:before{
+	background: url(../images/icon-set.png);
+}
+.oneself-content .border .oneself-product:before{
+	background: url(../images/icon-product.png);
+}
+.oneself-content .border .oneself-city:focus:after,
+.oneself-content .border .oneself-set:focus:after,
+.oneself-content .border .oneself-product:focus:after{
+	content: "";
+	width: 310px;
+	position: absolute;
+	height: 450px;
+	left:0;
+	background: url(../images/focus-oneself-border.png)no-repeat;
+}
+.onself-infor{
+	position: absolute;
+	color: #ffffff;
+    top: 252px;
+    text-align: center;
+    width: 310px;
+}
+.border .fs{
+	font-size: 40px;
+}
+.onself-infor  p{
+	font-size: 36px;
+	line-height: 82px
+}
+#controller .con-footer{
+	width: 1000px;
+	position: absolute;
+	left:272px;
+}
+#controller .con-footer a:first-child{
+	width: 24%;
+}
+#controller .con-footer a{
+	width: 16%;
+}
+.border .food-list .food-border a{
+	width: 360px;
+	display: inline-block;
+
+}
