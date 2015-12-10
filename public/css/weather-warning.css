@@ -38,18 +38,18 @@
 	padding: 32px;
 }
 .warning-content .prev,.warning-content .next{
-	position: absolute;
-	top:273px;
+	/*position: absolute;
+	top:273px;*/
 	width: 26px;
-	height: 80px;
+	height: 100%;
 }
 .warning-content .prev{
 	left: -45px;
-	background: url(../images/prev.png) no-repeat;
+	background: url(../images/prev.png) center center no-repeat;
 }
 .warning-content .next{
 		right:-45px;
-		background: url(../images/next.png)no-repeat;
+		background: url(../images/next.png) center center  no-repeat;
 }
 .warning-content .border .weather-content{
 	position: absolute;
