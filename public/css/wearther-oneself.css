@@ -20,9 +20,7 @@
 }
 .oneself-content .border{
 	/*text-align: center;*/
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
 }
 .oneself-content .border .bg{
 	width: 310px;
@@ -33,21 +31,15 @@
 }
 .oneself-content .border .oneself-city{
 	text-align: center;
-	position: absolute;
-	left: 15px;
-	top:0;
+	position: relative;
 }
 .oneself-content .border .oneself-set{
 	text-align: center;
-	position: absolute;
-	left: 355px;
-	top:0;
+	position: relative;
 }
 .oneself-content .border .oneself-product{
 	text-align: center;
-	position: absolute;
-	left: 690px;
-	top:0;
+	position: relative;
 }
 .oneself-content .border .oneself-city:before,
 .oneself-content .border .oneself-set:before,
