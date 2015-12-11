@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>天气详情</title>
+	<title>天气详情-趋向</title>
 	<link rel="stylesheet" href="../public/css/detail.css">
+	<!-- <link rel="stylesheet" href="../public/css/weather-trend.css">
+	<link rel="stylesheet" href="../public/css/weather-expon.css"> -->
 	<link rel="stylesheet" href="../public/css/common.css">
 </head>
-<body style="background: url('../public/images/bg-sunny.jpg') no-repeat;">
+<body style="background: url('../public/images/bg-rain.jpg') no-repeat;">
 	<div class="detail-container">
 		<div class="detail-content"> 
 			<div class="show-city">南宁</div>
@@ -15,83 +17,191 @@
 				<a class="bg-trend disp" href="#"></a>
 				<a class="bg-expon disp" href="#"></a>
 			</div>
-			<div class="county">
+			<div class="transparent-bg">
+				<div class="county" style="display:block">
+					<div class="list-container">
+						<ul class="list">
+							<li >
+								<div class="show-county">武鸣</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li>
+								<div class="show-county">隆安</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li>
+								<div class="show-county">马山</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li>
+								<div class="show-county">上林</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li>
+								<div class="show-county">宾阳</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li >
+								<div class="show-county">横县</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li >
+								<div class="show-county">武鸣</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li>
+								<div class="show-county">隆安</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li>
+								<div class="show-county">马山</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li>
+								<div class="show-county">上林</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li>
+								<div class="show-county">宾阳</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+							<li >
+								<div class="show-county">横县</div>
+								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
+								<div class="change">多云转阵雨</div>
+								<div class="temper">20℃/38℃</div>
+							</li>
+						</ul>
+					</div></div>
+				<div class="trend" style="display:none">
 				<div class="list-container">
 					<ul class="list">
-						<li >
-							<div class="show-county">武鸣</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
+						<li>
+							<div class="trend-day">9/28</div>
+							<img src="../public/images/yin.png"style="width:88px ;height:74px;">
+							<div class="trend-weather">阴</div>
+							<div>
+								<div class="min-temp" style="height:40px;">20°</div>
+								<div class="max-temp" style="height:200px;">40°</div>
+							</div>
 						</li>
 						<li>
-							<div class="show-county">隆安</div>
+							<div class="trend-day">9/28</div>
 							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
+							<div class="trend-weather">多云</div>
+							<div>
+								<div class="min-temp" style="height:40px;"> 20°</div>
+								<div class="max-temp" style="height:200px;"> 40°</div>
+							</div>
 						</li>
 						<li>
-							<div class="show-county">马山</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
+							<div class="trend-day">9/28</div>
+							<img src="../public/images/zhenyu.png"style="width:88px ;height:74px;">
+							<div class="trend-weather">阵雨</div>
+							<div>
+								<div class="min-temp" style="height:40px;">20°</div>
+								<div class="max-temp" style="height:200px;">40°</div>
+							</div>
 						</li>
 						<li>
-							<div class="show-county">上林</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
+							<div class="trend-day">9/28</div>
+							<img src="../public/images/zhenyu.png"style="width:88px ;height:74px;">
+							<div class="trend-weather">阵雨</div>
+							<div>
+								<div class="min-temp" style="height:40px;">20°</div>
+								<div class="max-temp" style="height:200px;">40°</div>
+							</div>
 						</li>
 						<li>
-							<div class="show-county">宾阳</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
-						</li>
-						<li >
-							<div class="show-county">横县</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
-						</li>
-						<li >
-							<div class="show-county">武鸣</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
-						</li>
-						<li>
-							<div class="show-county">隆安</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
-						</li>
-						<li>
-							<div class="show-county">马山</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
-						</li>
-						<li>
-							<div class="show-county">上林</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
-						</li>
-						<li>
-							<div class="show-county">宾阳</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
-						</li>
-						<li >
-							<div class="show-county">横县</div>
-							<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-							<div class="change">多云转阵雨</div>
-							<div class="temper">20℃/38℃</div>
+							<div class="trend-day">9/28</div>
+							<img src="../public/images/sunny.png"style="width:88px ;height:74px;">
+							<div class="trend-weather">晴</div>
+							<div>
+								<div class="min-temp" style="height:40px;">20°</div>
+								<div class="max-temp" style="height:200px;">40°</div>
+							</div>
 						</li>
 					</ul>
-				</div>
+				</div></div>
+				<div class="expon" style="display:none">
+				<div class="list-container">
+					<ul class="list">
+						<li>
+							<img src="../public/images/ex-quality.png"style="width:110px ;height:64px;">
+							<div class="expon-weather">空气质量</div>
+							<div class="situation">良好</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-wind.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">风向</div>
+							<div class="situation">北风3级</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-rays.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">紫外线</div>
+							<div class="situation">较强</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-start .png"style="width:100px ;height:64px;">
+							<div class="expon-weather">日出时间</div>
+							<div class="situation">5:55</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-end.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">日落时间</div>
+							<div class="situation">18:02</div>
+						</li>
+					</ul>
+					<ul class="list">
+						<li>
+							<img src="../public/images/ex-comfort.png"style="width:110px ;height:64px;">
+							<div class="expon-weather">穿衣</div>
+							<div class="situation">清爽</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-outdoor.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">出行</div>
+							<div class="situation">适宜</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-dress.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">湿度</div>
+							<div class="situation">干爽</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-go-out.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">日出时间</div>
+							<div class="situation">5:55</div>
+						</li>
+						<li>
+							<img src="../public/images/ex-humidity.png"style="width:100px ;height:64px;">
+							<div class="expon-weather">日落时间</div>
+							<div class="situation">18:02</div>
+						</li>
+					</ul>
+				</div></div>
 			</div>
 		</div>
 	</div>
@@ -103,6 +213,8 @@
 			<span id="menu4" class="menu-4"></span>
 		</div>
 	</div>
+
+
 	<div id="controller">
 		<div class="con-footer">
 			<a href="#" onfocus="addFocus('#menu1')" onblur="removeFocus('#menu1')"><img src="../public/images/dot.gif" /></a>

@@ -10,7 +10,7 @@
 .detail-content .disp{
 	display: block;
 	float: right;
-	margin-top: 45px;s
+	margin-top: 45px;
 }
 .detail-content .bg-county,.bg-trend,.bg-expon{
 	width: 135px;
@@ -61,15 +61,14 @@
 .show-county{
 	font-size: 28px;
 	text-align: center;
-
 }
-.list-container{
-	position: absolute;
-	top: 50px;
-	left:206px;
-	width: 974px;
-	height:427px;
-	background: url(../images/list-bg.png) no-repeat;
+.transparent-bg{
+    top: 50px;
+    left: 206px;
+    width: 974px;
+    height: 427px;
+    background: url(../images/list-bg.png) no-repeat;
+    position: absolute;
 }
 .detail-content .county .list{
 	width: 940px;
@@ -95,4 +94,60 @@
 .con-footer a{
 	margin-right: 5px;
 	width: 20%;
+}
+/*趋势部分*/
+.trend-day{
+	font-size: 28px;
+	text-align: center;
+}
+.trend .list li{
+	position: relative;
+    text-align: center;
+    margin-top: 38px;
+    font-size: 28px;
+    width: 105px;
+    height: 363px;
+    margin-right: 15px;
+    margin-left: 58px;
+}
+.trend-weather{
+	text-align: center;
+	font-size: 30px;
+	overflow: hidden;
+}
+.min-temp ,.max-temp{
+position: absolute;
+bottom: 0;
+width: 50px;
+text-align: center;
+}
+.min-temp {
+	background: url(../images/min-temp.png);
+}
+.max-temp {
+	margin-left: 50px;
+	background: url(../images/max-temp.png);
+}
+/*指数部分*/
+.expon .list li{
+	position: relative;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 28px;
+    overflow: hidden;
+    width: 112px;
+    height: 142px;
+    margin-right: 50px;
+    margin-left: 25px;
+}
+.expon-weather{
+	text-align: center;
+	font-size: 28px;
+	padding: 7px 0;
+	overflow: hidden;
+}
+.situation{
+	font-size: 24px;
+	color: #646464;
+	overflow: hidden;
 }
