@@ -19,10 +19,11 @@
     text-align: center;
 }
 .oneself-content .border{
-	/*text-align: center;*/
+	text-align: center;
     position: absolute;
     top: 0;
     left: 0;
+    width: 1020px;
 }
 .oneself-content .border .bg{
 	width: 310px;
@@ -32,22 +33,19 @@
 	background: url(../images/oneself-border.png) no-repeat;
 }
 .oneself-content .border .oneself-city{
+	display: inline-block;
 	text-align: center;
-	position: absolute;
-	left: 15px;
-	top:0;
+	position: relative;
 }
 .oneself-content .border .oneself-set{
+	display: inline-block;
 	text-align: center;
-	position: absolute;
-	left: 355px;
-	top:0;
+	position: relative;
 }
 .oneself-content .border .oneself-product{
+	display: inline-block;
 	text-align: center;
-	position: absolute;
-	left: 690px;
-	top:0;
+	position: relative;
 }
 .oneself-content .border .oneself-city:before,
 .oneself-content .border .oneself-set:before,
@@ -86,7 +84,7 @@
     width: 310px;
 }
 .border .fs{
-	font-size: 40px;
+	font-size: 38px;
 }
 .onself-infor  p{
 	font-size: 36px;

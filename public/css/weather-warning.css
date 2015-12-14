@@ -2,7 +2,15 @@
 	position: absolute;
 	top:85px;
 	left: 50px;
-	width: 100%;
+	width: 1180px;
+}
+.warning-container .prev {
+	top: 272px;
+	left: 0;
+}
+.warning-container .next {
+	top: 272px;
+	right: 0;
 }
 .warning-container .title{
 	position: absolute;
@@ -39,17 +47,9 @@
 }
 .warning-content .prev,.warning-content .next{
 	position: absolute;
-	top:273px;
+	top: 206px;
 	width: 26px;
 	height: 80px;
-}
-.warning-content .prev{
-	left: -45px;
-	background: url(../images/prev.png) no-repeat;
-}
-.warning-content .next{
-		right:-45px;
-		background: url(../images/next.png)no-repeat;
 }
 .warning-content .border .weather-content{
 	position: absolute;
@@ -63,5 +63,5 @@
 	line-height: 39px;
 }
 .warning-content .border .weather-content p{
-	text-indent: 2em;
+	/*text-indent: 2em;*/
 }

@@ -1,69 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<title>橙色预警</title>
-	<link rel="stylesheet" href="../public/css/weather-food.css">
 	<link rel="stylesheet" href="../public/css/common.css">
+	<link rel="stylesheet" href="../public/css/weather-food.css">
+	<script src="../public/js/template.js"></script>
 </head>
 <body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
-	<div class="food-container"> 
-		<h2 class="column">美食</h2>
-		<a href="#" class="subscribe"></a>
-		<div class="food-content">
-			<span class="prev"></span>
-			<span class="next"></span>
-			<ul class="border">
-				<li id="food-list-1"class="food-list">
-					<div class="food-border">
-						<div class="food-img"><img src="../uploads/image8.png"></div>
-					<div class="food-detail">
-						<h2 class="food-title">酱萝卜</h2>
-						<p class="title-detail">今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。</p>
-					</div>
-					<a href="#" onfocus="addFocus('#food-list-1')" onblur="removeFocus('#food-list-1')"><img src="../public/images/dot.gif" /></a>
-					</div>
-				    
-				</li>
-				<li id="food-list-2"class="food-list">
-					<div class="food-border">
-						<div class="food-img"><img src="../uploads/image8.png"></div>
-						<div class="food-detail">
-							<h2 class="food-title">酱萝卜</h2>
-							<p class="title-detail">今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。</p>
-						</div>
-						<a href="#" onfocus="addFocus('#food-list-2')" onblur="removeFocus('#food-list-2')"><img src="../public/images/dot.gif" /></a>
-					</div>
-				</li>
-				<li id="food-list-3" class="food-list">
-					<div class="food-border">
-						<div class="food-img"><img src="../uploads/image8.png"></div>
-						<div class="food-detail">
-							<h2 class="food-title">酱萝卜</h2>
-							<p class="title-detail">今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。</p>
-						</div>
-						<a href="#" onfocus="addFocus('#food-list-3')" onblur="removeFocus('#food-list-3')"><img src="../public/images/dot.gif" /></a>
-					</div>
-				</li>
-			</ul>
+	<div id="root"></div>
+		
+	<script src="../public/js/common.js"></script>
+	<script src="../public/js/pagination.js"></script>
+	<script id="templateId" type="text/html">
+		<div class="food-container"> 
+			<h2 class="column">{{title}}</h2>
+			<a href="{{href}}" class="subscribe"><img src="../public/images/dot.gif" /></a>
+			<div class="food-content">
+				<span class="prev"></span>
+				<span class="next"></span>
+				<ul class="border" id="listTpl">
+				</ul>
+			</div>
 		</div>
-	</div>
-	<div id="footer">
+		<div id="footer">
 			<div class="footer-menu">
 				<span id="menu1" class="menu-1"></span>
 				<span id="menu2" class="menu-2"></span>
 				<span id="menu3" class="menu-3"></span>
 				<span id="menu4" class="menu-4"></span>
-	</div>
-	<div id="controller">
-
-		<div class="con-footer">
-			<a href="#" onfocus="addFocus('#menu1')" onblur="removeFocus('#menu1')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu2')" onblur="removeFocus('#menu2')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu3')" onblur="removeFocus('#menu3')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu4')" onblur="removeFocus('#menu4')"><img src="../public/images/dot.gif" /></a>
+			</div>
 		</div>
-	</div>
-	<script src="../public/js/common.js"></script>
+		<div id="controller">
+			<div class="con-footer">
+				{{each footers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#menu{{i+1}}')" onblur="removeFocus('#menu{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+		</div>
+	</script>
+	<script id="list" type="text/javascript">
+		{{each list as v i}}
+			<li id="food-list{{i}}"class="food-list">
+				<div class="food-border">
+					<img class="food-img" src="{{v.img | defaultImg: '../public/images/default/default8.png'}}" />
+					<div class="food-detail">
+						<h2 class="food-title">{{v.title}}</h2>
+						<p class="title-detail">{{v.text}}</p>
+					</div>
+					<a class="A" href="{{v.href}}" onfocus="addFocus('#food-list{{i}}')" onblur="removeFocus('#food-list{{i}}')"><img src="../public/images/dot.gif" /></a>
+				</div>
+			</li>
+		{{/each}}
+	</script>
+	<script type="text/javascript">
+		var data = {
+			title: "美食",
+			href: "#",
+			footers: [{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			}],
+			lists: [{
+				title: "酱萝卜",
+				text: "今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。",
+				img: "",
+				href: "#"
+			},{
+				title: "酱萝卜",
+				text: "今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。",
+				img: "",
+				href: "#"
+			},{
+				title: "酱萝卜",
+				text: "今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。",
+				img: "",
+				href: "#"
+			},{
+				title: "酱萝卜",
+				text: "今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。",
+				img: "",
+				href: "#"
+			},{
+				title: "酱萝卜",
+				text: "今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。",
+				img: "",
+				href: "#"
+			}]
+		};
+		var html = template('templateId', data);
+		document.getElementById('root').innerHTML = html;
+
+		pagination({
+			template_id: "list",
+			container_id: "listTpl",
+			size: 3,
+			row: 3,
+			total: 5,
+			controller: true,
+			items: data.lists,
+			callback: function(text) {
+				document.getElementById('listTpl').innerHTML = text;
+			}
+		});
+	</script>
 </body>
 </html>

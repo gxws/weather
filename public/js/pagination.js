@@ -50,6 +50,7 @@
             total: 1, //总记录数
             row: 4, //每行个数 用来做翻页控制
             items: [], //数据
+            controller: false, //是否开启遥控器上下翻页
             callback: "" //回调函数
         };
         var param = defaults;
@@ -95,29 +96,37 @@
             nodelist = Array.prototype.slice.call(nodelist);
             // nodelist[0].focus();
             nodelist.forEach(function(element, index) {
-                if (index % param.row === param.row - 1) {
-                    element.onkeydown = function(e) {
-                        e = e || window.event;
-                        if (e.keyCode === 39) {
-                            if (param.curr < pages) {
-                                param.curr++
-                                    loadData();
-                            }
-                        }
-                    }
-                }
-                if (index % param.row === 0) {
-                    element.onkeydown = function(e) {
-                        e = e || window.event;
-                        if (e.keyCode === 37) {
-                            if (param.curr > 1) {
-                                param.curr--;
+                element.onkeydown = function(e) {
+                    e = e || window.event;
+                    if (e.keyCode === 39 && index % param.row === param.row - 1) {
+                        if (param.curr < pages) {
+                            param.curr++
                                 loadData();
-                            }
+                        }
+                    }else if(e.keyCode === 37 && index % param.row === 0) {
+                        if (param.curr > 1) {
+                            param.curr--;
+                            loadData();
                         }
                     }
                 }
             });
+            if(param.controller) {
+                document.onkeydown = function(e){
+                    e = e || window.event;
+                    if(e.keyCode === 34) {
+                        if (param.curr < pages) {
+                            param.curr++
+                            loadData();
+                        }
+                    }else if(e.keyCode === 33) {
+                         if (param.curr > 1) {
+                            param.curr--;
+                            loadData();
+                        }
+                    }
+                }
+            }
         }
         return loadData();
     }

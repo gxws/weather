@@ -20,12 +20,22 @@
     /*text-align: center;*/
 }
 .btn-city{
+	float: left;
     position: relative;
-	display: inline-block;
+	display: table;
 	width: 220px;
 	height: 130px;
-	font-size: 0;
+	/*line-height: 38px;*/
+	/*font-size: 30px;*/
+	/*color:#ffffff;*/
+	text-align: center;
 	background: url(../images/btn-city.png) no-repeat;
+}
+.btn-city .sub {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 30px;
+	color:#ffffff;
 }
 .btn-city:focus:before{
 	content: "";
@@ -33,75 +43,6 @@
 	width: 220px;
 	height: 130px;
 	background: url(../images/focus-btn-city.png);
-}
-.icon-nn,.icon-lz,.icon-gl,.icon-wz,.icon-bh,
-.icon-fcg,.icon-qz,.icon-gg,.icon-yl,.icon-bs,
-.icon-hz,.icon-hc,.icon-lb,.icon-cz{
-	position: absolute;
-	top: 49px;
-	width: 100%;
-    text-align: center;
-	font-size: 30px;
-	color:#ffffff;
-}
-/*.icon-nn{
-	background: url(../images/icon-nn.png) no-repeat;
-}
-.icon-qz{
-	background: url(../images/icon-qz.png) no-repeat;
-}
-.icon-lz{
-	background: url(../images/icon-lz.png) no-repeat;
-}
-.icon-gl{
-	background: url(../images/icon-gl.png) no-repeat;
-}
-.icon-bh{
-	background: url(../images/icon-bh.png) no-repeat;
-}
-.icon-fcg{
-	width: 95px;
-	left: 60px;
-	background: url(../images/icon-fcg.png) no-repeat;
-}
-.icon-gg{
-	background: url(../images/icon-gg.png) no-repeat;
-}
-.icon-yl{
-	background: url(../images/icon-yl.png) no-repeat;
-}
-.icon-hz{
-	background: url(../images/icon-hz.png) no-repeat;
-}
-.icon-hc{
-	background: url(../images/icon-hc.png) no-repeat;
-}
-.icon-lb{
-	background: url(../images/icon-lb.png) no-repeat;
-}
-.icon-cz{
-	background: url(../images/icon-cz.png) no-repeat;
-}
-.icon-wz{
-	background: url(../images/icon-wz.png) no-repeat;
-}
-.icon-bs{
-	background: url(../images/icon-bs.png) no-repeat;
-}*/
-.index-position,.index-city{
-	font-size: 26px;
-    line-height: 48px;
-	color: #ffffff;
-    width: 100%;
-    text-align: center;
-    top: 64px;
-    position: absolute;
-}
-.index-position{
-	
-}
-.index-city{
-	position: absolute;
 }
 #controller .con-footer{
 	width: 1000px;

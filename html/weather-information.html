@@ -5,165 +5,395 @@
 	<title>实时推荐</title>
 	<link rel="stylesheet" href="../public/css/common.css">
 	<link rel="stylesheet" href="../public/css/weather-information.css">
+	<script src="../public/js/template.js"></script>
 </head>
 <body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
-	<div id="header">
-		<div class="header-nav">
-			<span id="nav1" class="nav-1 active"></span>
-			<span id="nav2" class="nav-2"></span>
-			<span id="nav3" class="nav-3"></span>
-			<span id="nav4" class="nav-4"></span>
-			<span id="nav5" class="nav-5"></span>
-		</div>
-	</div>
-	<div class="infor-container">
-		<div class="marquee-border">
-			<div class="marquee">
-			一周,15天查询,气象云图,空气质量,天气实况,温度,降水,风力,气压,紫外线等准确发布,...</div>
-		</div>
-		
-		<div class="map">
-			<img src="../public/images/gx-map.png">
-			<div class="map-content">
-				<span id="bs" class="bs"></span>
-				<span id="hc" class="hc"></span> 
-				<span id='nn' class="nn"></span>
-				<span id="cz" class="cz"></span>
-				<span id="fcg" class="fcg"></span>
-				<span id="qz" class="qz"></span>
-				<span id="bh" class="bh"></span>
-				<span id="yl" class="yl"></span>
-				<span id="gg" class="gg"></span>
-				<span id='lb' class="lb"></span>
-				<span id="lz" class="lz"></span>
-				<span id="gl" class="gl"></span>
-				<span id="wz" class="wz"></span>
-				<span id="hz" class="hz"></span>
-			</div>
-			<div class="con-information-1">
-			<a href="#" onfocus="addFocus('#bs')" onblur="removeFocus('#bs')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#hc')" onblur="removeFocus('#hc')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#lz')" onblur="removeFocus('#lz')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#gl')" onblur="removeFocus('#gl')">
-				<img src="../public/images/dot.gif" /></a>
-			</div>
-			<div class="con-information-2">
-			<a href="#" onfocus="addFocus('#hz')" onblur="removeFocus('#hz')">
-				<img src="../public/images/dot.gif" /></a>
-			</div>
-			<div class="con-information-3">
-			<a href="#" onfocus="addFocus('#cz')" onblur="removeFocus('#cz')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nn')" onblur="removeFocus('#nn')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#lb')" onblur="removeFocus('#lb')">
-				<img src="../public/images/dot.gif" /></a>
-			</div>
-			<div class="con-information-4">
-			<a href="#" onfocus="addFocus('#fcg')" onblur="removeFocus('#fcg')">
-				<img src="../public/images/dot.gif" /></a>
-			
-			<a href="#" onfocus="addFocus('#gg')" onblur="removeFocus('#gg')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#wz')" onblur="removeFocus('#wz')">
-				<img src="../public/images/dot.gif" /></a>
-			</div>
-			<div class="con-information-5">	
-			<a href="#" onfocus="addFocus('#yl')" onblur="removeFocus('#yl')">
-				<img src="../public/images/dot.gif" />			</a>
-			<a href="#" onfocus="addFocus('#bh')" onblur="removeFocus('#bh')">
-				<img src="../public/images/dot.gif" /></a>
-			</div>
-			<div class="circul-content">
-				<div class="list1">
-					<div class="rank">
-						<div class="date">今天</div>
-						<div class="day">09/25</div></div>
-					<div class="rank img"><img src="../public/images/sun-cloud.png"style="width:85px;height:68px;"></div>
-					<div class="rank">
-						<div>多云转阵雨</div>
-						<div>20℃/38℃</div></div>			
-				</div>
-				<div class="list2">
-					<div class="rank">
-						<div class="date">今天</div>
-						<div class="day">09/25</div></div>
-					<div class="rank img"><img src="../public/images/sunny.png" style="width:85px;height:68px;"></div>
-					<div class="rank">
-						<div>多云转阵雨</div>
-						<div>20℃/38℃</div></div>			
-				</div>
-				<div class="list3">
-					<div class="rank">
-						<div class="date">今天</div>
-						<div class="day">09/25</div></div>
-					<div class="rank img"><img src="../public/images/zhenyu.png"style="width:85px;height:68px;"></div>
-					<div class="rank">
-						<div>多云转阵雨</div>
-						<div>20℃/38℃</div></div>			
-				</div>
-				<div class="list4">
-					<div class="rank">
-						<div class="date">今天</div>
-						<div class="day">09/25</div></div>
-					<div class="rank img"><img src="../public/images/cloudy-rain.png"style="width:85px;height:68px;"></div>
-					<div class="rank">
-						<div>多云转阵雨</div>
-						<div>20℃/38℃</div></div>			
-				</div>
-				<div class="list5">
-					<div class="rank">
-						<div class="date">今天</div>
-						<div class="day">09/25</div></div>
-					<div class="rank img"><img src="../public/images/yin.png"style="width:85px;height:68px;"></div>
-					<div class="rank">
-						<div>多云转阵雨</div>
-						<div>20℃/38℃</div></div>			
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="footer">
-		<div class="footer-menu">
-			<span id="menu1" class="menu-1"></span>
-			<span id="menu2" class="menu-2"></span>
-			<span id="menu3" class="menu-3"></span>
-			<span id="menu4" class="menu-4"></span>
-		</div>
-	</div>
-	<div id="controller">
-		<div class="con-header">
-			<a href="#" onfocus="addFocus('#nav1')" onblur="removeFocus('#nav1')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav2')" onblur="removeFocus('#nav2')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav3')" onblur="removeFocus('#nav3')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav4')" onblur="removeFocus('#nav4')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav5')" onblur="removeFocus('#nav5')">
-				<img src="../public/images/dot.gif" /></a>
-		</div>
-		
-		<div class="con-footer">
-			<a href="#" onfocus="addFocus('#menu1')" onblur="removeFocus('#menu1')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu2')" onblur="removeFocus('#menu2')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu3')" onblur="removeFocus('#menu3')">
-				<img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu4')" onblur="removeFocus('#menu4')">
-				<img src="../public/images/dot.gif" /></a>
-		</div>
-	</div>
+	<div id="root"></div>
 
 	<script src="../public/js/common.js"></script>
-	<script >
-		// var nn=document.getElementById('nn');
-	 //    nn.className='nn'+' '+'focus';
+	<script id="templateId" type="text/html">
+		<div id="header">
+			<div class="header-nav">
+				{{each headers as v i}}
+					<span id="nav{{i+1}}" class="nav-{{i+1}} {{if v.active}}active{{/if}}"></span>
+				{{/each}}
+			</div>
+		</div>
+		<div class="infor-container">
+			<div class="marquee-border">
+				<div class="marquee">
+				<marquee>{{marquee}}</marquee></div>
+			</div>
+			<div class="map">
+				<img src="../public/images/gx-map.png">
+				<div class="map-content">
+					<span id="citybs" class="bs"></span>
+					<span id="cityhc" class="hc"></span> 
+					<span id='citynn' class="nn"></span>
+					<span id="citycz" class="cz"></span>
+					<span id="cityfcg" class="fcg"></span>
+					<span id="cityqz" class="qz"></span>
+					<span id="citybh" class="bh"></span>
+					<span id="cityyl" class="yl"></span>
+					<span id="citygg" class="gg"></span>
+					<span id='citylb' class="lb"></span>
+					<span id="citylz" class="lz"></span>
+					<span id="citygl" class="gl"></span>
+					<span id="citywz" class="wz"></span>
+					<span id="cityhz" class="hz"></span>
+				</div>
+				<div id="weather-nn" class="circul-content {{if !nn.current}}hidden{{/if}}">
+					{{each nn.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.name}}</div>
+								<div class="day">{{v.date}}</div></div>
+							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-gl" class="circul-content {{if !gl.current}}hidden{{/if}}">
+					{{each gl.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.name}}</div>
+								<div class="day">{{v.date}}</div></div>
+							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-bs" class="circul-content {{if !bs.current}}hidden{{/if}}">
+					{{each bs.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.name}}</div>
+								<div class="day">{{v.date}}</div></div>
+							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-hc" class="circul-content {{if !hc.current}}hidden{{/if}}">
+					{{each hc.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.name}}</div>
+								<div class="day">{{v.date}}</div></div>
+							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-lz" class="circul-content {{if !lz.current}}hidden{{/if}}">
+					{{each lz.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.name}}</div>
+								<div class="day">{{v.date}}</div></div>
+							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-hz" class="circul-content {{if !hz.current}}hidden{{/if}}">
+					{{each hz.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.name}}</div>
+								<div class="day">{{v.date}}</div></div>
+							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+		<div class="map-a">
+			<a {{if bs.current}}class="curr"{{/if}} href="{{bs.href}}" id="bs" data-map="{up:'nav()',bottom:'cz',left:'',right:'hc'}"><img src="../public/images/dot.gif"/></a>
+			<a {{if hc.current}}class="curr"{{/if}} href="{{hc.href}}" id="hc" data-map="{up:'nav()',bottom:'nn',left:'bs',right:'lz'}"><img src="../public/images/dot.gif" /></a>
+			<a {{if lz.current}}class="curr"{{/if}} href="{{lz.href}}" id="lz" data-map="{up:'nav()',bottom:'lb',left:'hc',right:'gl'}"><img src="../public/images/dot.gif" /></a>
+			<a {{if gl.current}}class="curr"{{/if}} href="{{gl.href}}" id="gl" data-map="{up:'nav()',bottom:'wz',left:'lz',right:'hz'}"><img src="../public/images/dot.gif" /></a>
+
+			<a href="#" id="lb" data-map="{up:'lz',bottom:'gg',left:'nn',right:'wz'}"><img src="../public/images/dot.gif"/></a>
+			<a {{if hz.current}}class="curr"{{/if}} href="{{hz.href}}" id="hz" data-map="{up:'gl',bottom:'wz',left:'gl',right:''}"><img src="../public/images/dot.gif"/></a>
+
+			<a href="#" id="cz" data-map="{up:'bs',bottom:'fcg',left:'',right:'nn'}"><img src="../public/images/dot.gif"/></a>
+			<a {{if nn.current}}class="curr"{{/if}} href="{{nn.href}}" id="nn" data-map="{up:'hc',bottom:'qz',left:'cz',right:'gg'}"><img src="../public/images/dot.gif"/></a>
+			<a href="#" id="gg" data-map="{up:'lb',bottom:'yl',left:'nn',right:'wz'}"><img src="../public/images/dot.gif"/></a>
+			<a href="#" id="wz" data-map="{up:'hz',bottom:'yl',left:'gg',right:''}"><img src="../public/images/dot.gif"/></a>
+
+			<a href="#" id="fcg" data-map="{up:'nn',bottom:'menu()',left:'cz',right:'qz'}"><img src="../public/images/dot.gif"/></a>
+			<a href="#" id="qz" data-map="{up:'nn',bottom:'bh',left:'fcg',right:'yl'}"><img src="../public/images/dot.gif"/></a>
+			<a href="#" id="yl" data-map="{up:'gg',bottom:'bh',left:'qz',right:'wz'}"><img src="../public/images/dot.gif"/></a>
+			<a href="#" id="bh" data-map="{up:'qz',bottom:'menu()',left:'qz',right:'yl'}"><img src="../public/images/dot.gif"/></a>
+		</div>
+
+		<div id="footer">
+			<div class="footer-menu">
+				<span id="menu1" class="menu-1"></span>
+				<span id="menu2" class="menu-2"></span>
+				<span id="menu3" class="menu-3"></span>
+				<span id="menu4" class="menu-4"></span>
+			</div>
+		</div>
+		<div id="controller">
+			<div class="con-header">
+				{{each headers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#nav{{i+1}}')" onblur="removeFocus('#nav{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+			<div class="con-footer">
+				{{each footers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#menu{{i+1}}')" onblur="removeFocus('#menu{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+		</div>
+	</script>
+	<script type="text/javascript">
+		var data = {
+			headers: [{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: true
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			}],
+			footers: [{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			}],
+			marquee: "一周,15天查询,气象云图,空气质量,天气实况,温度,降水,风力,气压,紫外线等准确发布",
+			nn: {
+				href: "#nn",
+				current: false,
+				list: [{
+					name: "今天",
+					date: "09/25",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					name: "明天",
+					date: "09/26",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			gl: {
+				href: "#gl",
+				current: true,
+				list: [{
+					name: "gl",
+					date: "09/25",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					name: "明天",
+					date: "09/26",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			bs: {
+				href: "#bs",
+				current: false,
+				list: [{
+					name: "bs",
+					date: "09/25",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					name: "明天",
+					date: "09/26",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			hc: {
+				href: "#hc",
+				current: false,
+				list: [{
+					name: "hc",
+					date: "09/25",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					name: "明天",
+					date: "09/26",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			lz: {
+				href: "#lz",
+				current: false,
+				list: [{
+					name: "lz",
+					date: "09/25",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					name: "明天",
+					date: "09/26",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			hz: {
+				href: "#hz",
+				current: false,
+				list: [{
+					name: "hz",
+					date: "09/25",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					name: "明天",
+					date: "09/26",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			}
+		};
+		var html = template('templateId', data);
+		document.getElementById('root').innerHTML = html;
+		mapFocus('gl');
+		var mapA = document.querySelectorAll('.map-a a');
+		var arr = Array.prototype.slice.call(mapA);
+		arr.forEach(function(v, i){
+			v.onfocus = function(){
+				var id = v.getAttribute('id');
+				console.log(id);
+				mapFocus(id);
+				var list = document.querySelectorAll('.circul-content');
+				for(var i=0,len=list.length; i<len; i++){
+					list[i].style.display = 'none';
+				}
+				document.getElementById('weather-'+id).style.display = 'block';
+			}
+		});
+
+		function nav(index) {
+			var index = index || 0;
+			document.querySelectorAll('.con-header a')[index].focus();
+		}
+		function menu(index) {
+			var index = index || 0;
+			document.querySelectorAll('.con-footer a')[index].focus();
+		}
+		function mapFocus(defaultCityId){
+			var cityid = defaultCityId || 'nn';
+			var cityA = document.getElementById(cityid);
+			var attr = cityA.getAttribute('data-map');
+				attr = eval('(' + attr + ')'); 
+			cityA.focus();
+			addFocus('#city' + cityid);
+
+			cityA.onkeydown = function(e){
+				e = e || window.event;
+				e.preventDefault();
+				var reg = new RegExp("\\(.*\\)$", "g");
+				if(e.keyCode === 37 && attr.left){
+					removeFocus('#city'+cityid);
+					mapFocus(attr.left);
+				}else if(e.keyCode === 38 && attr.up){
+					removeFocus('#city'+cityid);
+					if(reg.test(attr.up)){
+						eval(attr.up);
+					}else{
+						mapFocus(attr.up);
+					}
+				}else if(e.keyCode === 39 && attr.right){
+					removeFocus('#city'+cityid);
+					mapFocus(attr.right);
+				}else if(e.keyCode === 40 && attr.bottom){
+					removeFocus('#city'+cityid);
+					if(reg.test(attr.bottom)){
+						eval(attr.bottom);
+					}else{
+						mapFocus(attr.bottom);
+					}
+				}else if(e.keyCode === 13){
+					var url = this.getAttribute('href');
+					window.location.href = url;
+				}
+			}
+		}
 	</script>
 </body>
 </html>
