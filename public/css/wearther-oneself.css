@@ -14,7 +14,6 @@
 	position: absolute;
 	top:102px;
 	left:32px;
-    font-size: 0;
     width: 1020px;
     text-align: center;
 }
@@ -28,7 +27,7 @@
 .oneself-content .border .bg{
 	width: 310px;
 	height: 450px;
-    margin: 0 15px;
+    margin: 0 12px;
 	display: inline-block;
 	background: url(../images/oneself-border.png) no-repeat;
 }

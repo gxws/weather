@@ -37,9 +37,24 @@
 	font-size: 30px;
 	color:#ffffff;
 }
-.btn-city:focus:before{
+.btn-city:focus .city-border {
+	display: block;
+}
+/*.btn-city:focus:before{
 	content: "";
 	position: absolute;
+	top: 0;
+	left: 0;
+	width: 220px;
+	height: 130px;
+	background: url(../images/focus-btn-city.png);
+	z-index: 9;
+}*/
+.city-border {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 220px;
 	height: 130px;
 	background: url(../images/focus-btn-city.png);
