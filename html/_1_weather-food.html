@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>橙色预警</title>
+	<link rel="stylesheet" href="../public/css/weather-food.css">
+	<link rel="stylesheet" href="../public/css/common.css">
+	<script src="../public/js/template.js"></script>
+</head>
+<body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
+	<div id="root"></div>
+	<script src="../public/js/common.js"></script>
+	<script src="../public/js/pagination.js"></script>
+	<script id="templateId"type="text/html">
+		<div class="food-container"> 
+		<h2 class="column">{{column_title}}</h2>
+		<a href="#" class="subscribe"></a>
+		<a href="#" class="cancel-subscribe"></a>
+		<div class="food-content">
+			<span class="prev"></span>
+			<span class="next"></span>
+			<ul id="ul-border" class="border"></ul>
+		</div>
+	</div>
+	<div id="footer">
+			<div class="footer-menu">
+				<span id="menu1" class="menu-1"></span>
+				<span id="menu2" class="menu-2"></span>
+				<span id="menu3" class="menu-3"></span>
+				<span id="menu4" class="menu-4"></span>
+	</div>
+	<div id="controller">
+		<div class="con-footer">
+			{{each footer as v i}}
+				<a href="v.href" onfocus="addFocus('#menu{{i+1}}')" onblur="removeFocus('#menu{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+			{{/each}}
+		</div>
+	</div>
+	</script>
+	<script id="list" type="text/html">
+		{{each list as v i}}
+				<li id="food-list-{{i+1}}"class="food-list">
+					<div class="food-border">
+						<div class="food-img"><img src="{{v.img | defaultImg:'../public/images/default/default5.png'}}"></div>
+					<div class="food-detail">
+						<h2 class="food-title">{{v.title}}</h2>
+						<p class="title-detail">{{v.text}}</p>
+					</div>
+					<a href="#" onfocus="addFocus('#food-list-{{i+1}}')" onblur="removeFocus('#food-list-{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+					</div>    
+				</li>
+				{{/each}}
+	</script>
+	<script>
+	var data={
+		column_title:"美食",
+		lists:[{
+			href:"#",
+			img:"../uploads/image8.png",
+			title:"酱萝卜",
+			text:"今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。",
+		},{
+			href:"#",
+			img:"../uploads/image8.png",
+			title:"酱萝卜",
+			text:"今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。",
+		},{
+			href:"#",
+			img:"../uploads/image8.png",
+			title:"酱萝卜",
+			text:"今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。",
+		},{
+			href:"#",
+			img:"../uploads/image8.png",
+			title:"酱萝卜",
+			text:"今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。",
+		}],
+		footers:[{
+			href:"#",
+		},{
+			href:"#",
+		},{
+			href:"#",
+		},{
+			href:"#",
+		}]
+	};
+	var html=template("templateId",data);
+	document.getElementById('root').innerHTML=html;
+	pagination({
+		template_id:"list",
+		container_id:"ul-border",
+		size:3,
+		row:1,
+		total:6,
+		items:data.lists,
+		callback:function(text){
+			document.getElementById('ul-border').innerHTML=text;
+		}
+	});
+	</script>
+</body>
+</html>
