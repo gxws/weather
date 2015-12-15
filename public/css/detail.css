@@ -137,7 +137,7 @@ text-align: center;
     overflow: hidden;
     width: 112px;
     height: 142px;
-    margin-right: 50px;
+    margin-right: 46px;
     margin-left: 25px;
 }
 .expon-weather{
@@ -150,4 +150,39 @@ text-align: center;
 	font-size: 24px;
 	color: #646464;
 	overflow: hidden;
+}
+.expon .list-container .list {
+	padding-left: 20px;
+} 
+.transparent-box {
+	display: none;
+}
+
+.progress {
+	position: absolute;
+	bottom: 0;
+	width: 103px;
+	height: 200px;
+	overflow: hidden;
+}
+.progress .weather-min, .progress .weather-max {
+	display: inline-table;
+	position: absolute;
+	bottom: 0;
+	font-size: 28px;
+	width: 50px;
+}
+.progress .weather-min {
+	left: 0;
+	background-color: #54c3f1;
+}
+.progress .weather-min:before, .progress .weather-max:before {
+	position: absolute;
+	content: "°";
+	width: 15px;
+	right: 0;
+}
+.progress .weather-max {
+	left: 53px;
+	background-color: #f99b89;
 }
