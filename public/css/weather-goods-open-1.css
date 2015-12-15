@@ -1,0 +1,79 @@
+.product-container{
+	position: absolute;
+	top:116px;
+	width: 100%;
+}
+.product-container .product-title{
+	position: absolute;
+	top:0;
+	text-align: center;
+	color: #004ea2;
+	font-size: 40px;
+	width: 100%;
+}
+.product-container .tip{
+	position: absolute;
+	top:364px;
+	text-align: center;
+	width: 100%;
+	font-size: 44px;
+	color: #318ed8;
+}
+.product-container .product-list{
+	font-size: 0;
+	position: absolute;
+	top:107px;
+	width: 100%;
+	text-align: center;
+    display: inline-block;
+}
+.product-container .fs{
+	font-size: 48px;
+}
+.product-container .open-price-1,.open-price-2,.open-price-3{
+	display: inline-block;
+	margin:0 30px;
+	width: 270px;
+	height: 259px;
+	font-size: 34px;
+    line-height: 279px;
+	color: #000;
+	overflow: hidden;
+	background: url(../images/goods-container.png) no-repeat;
+}
+.product-container .open-price-1::before,
+.product-container .open-price-2::before,
+.product-container .open-price-3::before{
+	content: "";
+	position: absolute;
+	width: 112px;
+	height: 45px;
+	z-index: 1;
+    top: 30px;
+}
+.product-container .open-price-1::before{
+	left:257px;
+	background: url(../images/month-1.png)center center no-repeat;
+}
+.product-container .open-price-2::before{
+	left:587px;
+	background: url(../images/month-3.png) center center no-repeat; 
+}
+.product-container .open-price-3::before{
+	left:916px;
+	background: url(../images/month-6.png) center center no-repeat; 
+}
+.product-container .open-price-1:focus,
+.product-container .open-price-2:focus,
+.product-container .open-price-3:focus{
+	background: url(../images/focus-goods-container.png) no-repeat;
+}
+#controller .con-footer{
+	width: 1000px;
+	position: absolute;
+	left:272px;
+}
+#controller .con-footer a{
+	width: 20%;
+	margin-left:5px;
+}
