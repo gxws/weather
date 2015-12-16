@@ -97,7 +97,7 @@
 			},{
 				href: "#",
 			}],
-			nav: 2,
+			nav: 1,
 			lists: [{
 				title: "养生1",
 				img: "../uploads/image8.png",
@@ -127,27 +127,27 @@
 				img: "../uploads/image8.png",
 				href: "#"
 			},{
-				title: "养生1",
-				img: "../uploads/image8.png",
-				href: "#"
-			},{
-				title: "养生2",
-				img: "../uploads/image8.png",
-				href: "#"
-			},{
-				title: "养生3",
-				img: "../uploads/image8.png",
-				href: "#"
-			},{
-				title: "养生4",
-				img: "../uploads/image8.png",
-				href: "#"
-			},{
-				title: "养生5",
+				title: "养生7",
 				img: "../uploads/image8.png",
 				href: "#"
 			},{
 				title: "养生6",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生7",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生7",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生6",
+				img: "../uploads/image8.png",
+				href: "#"
+			},{
+				title: "养生7",
 				img: "../uploads/image8.png",
 				href: "#"
 			},{
@@ -165,11 +165,15 @@
 			container_id: "listTpl",
 			size: 8,
 			row: 4,
-			total: 14,
+			total: 9,
 			items: data.lists,
 			callback: function(text, list){
-				if(data.headers && list.length < 7 && !data.nav){
-					text += '<a href="#" class="subscript-list"><img class="subscript-list-img" src="../public/images/subscript-list-bg.png" /><div class="subscript-list-shadow"></div></a>';
+				if(data.headers && list.length < 8 && !data.nav){
+					text += '<a href="#" class="subscript-list"><img class="subscript-list-img" src="../public/images/subscript-list-bg.png" />';
+					if(list.length > 3){
+						text += '<div class="subscript-list-shadow"></div>';
+					}
+					text += '</a>';
 				}
 				document.getElementById('listTpl').innerHTML = text;
 			}

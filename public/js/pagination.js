@@ -50,7 +50,7 @@
             total: 1, //总记录数
             row: 4, //每行个数 用来做翻页控制
             items: [], //数据
-            controller: false, //是否开启遥控器上下翻页
+            controller: true, //是否开启遥控器上下翻页
             callback: "" //回调函数
         };
         var param = defaults;
@@ -59,7 +59,10 @@
         }
         param.total = param.total || param.items.length;
 
-        if (!param.template_id || !param.container_id || param.items.length === 0) return;
+        if (!param.template_id || !param.container_id || param.items.length === 0) {
+            if (param.callback) param.callback('', []);
+            return ;
+        }
 
         var loadData = function() {
             var start = 0;

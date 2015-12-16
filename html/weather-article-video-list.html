@@ -18,10 +18,14 @@
 			<h1 class="article-video-title">{{title}}</h1>
 			<div class="article-video-text"> {{text}}</div>
 			<div class="article-video-list">
-				<span class="prev"></span>
-				<table id="listTpl" class="article-video-table">
-				</table>
-				<span class="next"></span>
+				{{if lists.length}}
+					<span class="prev"></span>
+					<table id="listTpl" class="article-video-table">
+					</table>
+					<span class="next"></span>
+				{{else}}
+					<div style="text-align: center;font-size: 48px;color: #0a0a0a;margin-top: 25px">尚未更新视频。</div>
+				{{/if}}
 			</div>
 		</div>
 		<div id="footer">
@@ -227,7 +231,6 @@
 			row: 15,
 			total: 40,
 			items: data.lists,
-			controller: true,
 			callback: function(text) {
 				document.getElementById('listTpl').innerHTML = text;
 				tableFocus();

@@ -32,10 +32,10 @@
 	position: absolute;
 	top:102px;
 	left:0;
-    font-size: 0;
-    width: 1180px;
+    width: 1080px;
 }
 .food-list{
+	float: left;
 	display: inline-block;
 	width: 360px;
 	height: 485px;
@@ -102,5 +102,5 @@
 	left:-36px;
 }
 .food-content .next{
-	right:65px;
+	right:-36px;
 }

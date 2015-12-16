@@ -17,10 +17,13 @@
 			<h2 class="column">{{title}}</h2>
 			<a href="{{href}}" class="subscribe"><img src="../public/images/dot.gif" /></a>
 			<div class="food-content">
-				<span class="prev"></span>
-				<span class="next"></span>
-				<ul class="border" id="listTpl">
-				</ul>
+				{{if lists.length}}
+					<span class="prev"></span>
+					<span class="next"></span>
+					<ul class="border" id="listTpl"></ul>
+				{{else}}
+					<div style="text-align: center;font-size: 48px;color: #0a0a0a;margin-top: 166px">暂无内容，敬请期待。</div>
+				{{/if}}
 			</div>
 		</div>
 		<div id="footer">
@@ -39,7 +42,7 @@
 			</div>
 		</div>
 	</script>
-	<script id="list" type="text/javascript">
+	<script id="list" type="text/html">
 		{{each list as v i}}
 			<li id="food-list{{i}}"class="food-list">
 				<div class="food-border">
@@ -101,7 +104,6 @@
 			size: 3,
 			row: 3,
 			total: 5,
-			controller: true,
 			items: data.lists,
 			callback: function(text) {
 				document.getElementById('listTpl').innerHTML = text;

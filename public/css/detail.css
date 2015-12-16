@@ -190,5 +190,8 @@ text-align: center;
 	left: 120px;
 }
 .con-footer a{
-	width: 25%;
+	width: 1%;
+}
+.con-footer a:first-child {
+	width: 96%;
 }

@@ -20,9 +20,13 @@
 			</div>
 		</div>
 		<div class="weather-life-container">
-			<div class="prev"></div>
-			<div id="listTpl" class="weather-life-body"></div>
-			<div class="next"></div>
+			{{if lists.length}}
+				<div class="prev"></div>
+				<div id="listTpl" class="weather-life-body"></div>
+				<div class="next"></div>
+			{{else}}
+				<div style="text-align: center;font-size: 48px;color: #0a0a0a;margin-top: 166px">暂无内容，敬请期待。</div>
+			{{/if}}
 		</div>
 		<div id="footer">
 			<div class="footer-menu">
@@ -189,7 +193,6 @@
 			size: 4,
 			row: 2,
 			total: 6,
-			controller: true,
 			items: data.lists,
 			callback: function(text) {
 				document.getElementById('listTpl').innerHTML = text;

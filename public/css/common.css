@@ -155,8 +155,10 @@ li{
 	height: 80px;
 }
 .prev {
+	display: none;
 	background: url('../images/prev.png') no-repeat;
 }
 .next {
+	display: none;
 	background: url('../images/next.png') no-repeat;
 }

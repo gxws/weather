@@ -17,9 +17,13 @@
 			<h1 class="article-title">{{title}}</h1>
 			<div class="article-text">{{text}}</div>
 			<div class="article-video">
-				<span class="prev"></span>
-				<div id="listTpl"></div>
-				<span class="next"></span>
+				{{if lists.length}}
+					<span class="prev"></span>
+					<div id="listTpl"></div>
+					<span class="next"></span>
+				{{else}}
+					<div style="text-align: center;font-size: 48px;color: #0a0a0a;margin-top: 65px">尚未更新视频。</div>
+				{{/if}}
 			</div>
 		</div>
 		<div id="footer">
