@@ -47,7 +47,7 @@
             next: "next", //下一页
             curr: 1, //客户端当前页
             size: 4, //每页显示个数
-            total: 1, //总记录数
+            total: "", //总记录数
             row: 4, //每行个数 用来做翻页控制
             items: [], //数据
             controller: true, //是否开启遥控器上下翻页

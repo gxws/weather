@@ -29,7 +29,7 @@
 	/*font-size: 30px;*/
 	/*color:#ffffff;*/
 	text-align: center;
-	background: url(../images/btn-city.png) no-repeat;
+	background: url(../images/btn-city.png?__spriter) no-repeat;
 }
 .btn-city .sub {
 	display: table-cell;
@@ -57,7 +57,7 @@
 	left: 0;
 	width: 220px;
 	height: 130px;
-	background: url(../images/focus-btn-city.png);
+	background: url(../images/focus-btn-city.png?__spriter);
 }
 #controller .con-footer{
 	width: 1000px;

@@ -24,7 +24,7 @@
 	left: 968px;
 	width: 186px;
 	height: 81px;
-	background: url(../images/btn-home.png) no-repeat;
+	background: url(../images/btn-home.png?__spriter) no-repeat;
 }
 .warning-container .btn-home:focus:after{
 	content: "";
@@ -32,7 +32,7 @@
 	z-index: 1;
 	width: 186px;
 	height: 81px;
-	background: url(../images/focus-btn-home.png) no-repeat;
+	background: url(../images/focus-btn-home.png?__spriter) no-repeat;
 }
 .warning-content{
 	position: absolute;
@@ -40,7 +40,7 @@
 	left:45px;
 	width: 1090px;
 	height: 450px;
-	background: url(../images/bg-border.png) no-repeat;
+	background: url(../images/article-tw-content-bg.png) no-repeat;
 }
 .warning-content .border{
 	padding: 32px;

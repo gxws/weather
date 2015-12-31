@@ -10,7 +10,6 @@
 <body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
 	<div id="root"></div>
 
-	<script src="../public/js/common.js"></script>
 	<script src="../public/js/pagination.js"></script>
 	<script id="templateId" type="text/html">
 		{{if headers && !nav}}
@@ -24,15 +23,21 @@
 		{{/if}}
 		{{if nav}}
 			<div class="subscript-nav">
-				<a class="subscript-nav-current {{if nav === 1}}active{{/if}}" href="#"></a>
-				<a class="subscript-nav-no {{if nav === 2}}active{{/if}}" href="#"></a>
+				<a {{if nav === 1}}id="focus"{{/if}} class="subscript-nav-current {{if nav === 1}}active{{/if}}" href="#"></a>
+				<a {{if nav === 2}}id="focus"{{/if}} class="subscript-nav-no {{if nav === 2}}active{{/if}}" href="#"></a>
 			</div> 
 		{{/if}}
 
 		<div class="subscript-container {{if nav === 1}}mysubscript{{/if}}{{if nav === 2}}unsubscript{{/if}}">
-			<span class="prev"></span>
-			<div id="listTpl"></div>
-			<span class="next"></span>
+			{{if !lists.length && nav === 1}}
+				<div style="text-align: center;font-size: 42px;color: #0a0a0a;margin-top: 146px">您当前无订阅哦！<br/> 点击上方“为订阅”，找找感兴趣的内容吧！</div>
+			{{else if !lists.length && nav === 2}}
+				<div style="text-align: center;font-size: 42px;color: #0a0a0a;margin-top: 146px">您的订阅数已经击败全国99%的用户</div>
+			{{else}}
+				<span class="prev"></span>
+				<div id="listTpl"></div>
+				<span class="next"></span>
+			{{/if}}
 		</div>
 		<div id="footer">
 			<div class="footer-menu">
@@ -97,7 +102,7 @@
 			},{
 				href: "#",
 			}],
-			nav: 1,
+			nav: 0,
 			lists: [{
 				title: "养生1",
 				img: "../uploads/image8.png",
@@ -165,7 +170,6 @@
 			container_id: "listTpl",
 			size: 8,
 			row: 4,
-			total: 9,
 			items: data.lists,
 			callback: function(text, list){
 				if(data.headers && list.length < 8 && !data.nav){
@@ -179,5 +183,6 @@
 			}
 		});
 	</script>
+	<script src="../public/js/common.js"></script>
 </body>
 </html>

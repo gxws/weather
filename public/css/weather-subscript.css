@@ -10,13 +10,13 @@
 	left: -45px;
 	width: 216px;
 	height: 106px;
-	background: url('../images/subscript-current-default.png');
+	background: url('../images/subscript-current-default.png?__spriter');
 }
 .subscript-nav-current.active {
-	background: url('../images/subscript-current.png');
+	background: url('../images/subscript-current.png?__spriter');
 }
 .subscript-nav-current:focus {
-	background: url('../images/subscript-current-focus.png');
+	background: url('../images/subscript-current-focus.png?__spriter');
 }
 .subscript-nav-no {
 	display: inline-block;
@@ -25,13 +25,13 @@
 	left: 175px;
 	width: 216px;
 	height: 106px;
-	background: url('../images/subscript-no-default.png');
+	background: url('../images/subscript-no-default.png?__spriter');
 }
 .subscript-nav-no.active {
-	background: url('../images/subscript-no.png');
+	background: url('../images/subscript-no.png?__spriter');
 }
 .subscript-nav-no:focus {
-	background: url('../images/subscript-no-focus.png');
+	background: url('../images/subscript-no-focus.png?__spriter');
 }
 
 .subscript-container {

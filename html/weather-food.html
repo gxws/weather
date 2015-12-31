@@ -15,7 +15,7 @@
 	<script id="templateId" type="text/html">
 		<div class="food-container"> 
 			<h2 class="column">{{title}}</h2>
-			<a href="{{href}}" class="subscribe"><img src="../public/images/dot.gif" /></a>
+			<a href="{{href}}" class="{{if nav === 1}}subscribe{{else if nav === 2}}unsubscribe{{/if}}"><img src="../public/images/dot.gif" /></a>
 			<div class="food-content">
 				{{if lists.length}}
 					<span class="prev"></span>
@@ -69,6 +69,7 @@
 			},{
 				href: "#",
 			}],
+			nav: 2,
 			lists: [{
 				title: "酱萝卜",
 				text: "今天为大家推荐一款盛夏时节的消暑小菜——酱萝卜的做法。",

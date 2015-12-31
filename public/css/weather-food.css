@@ -21,7 +21,15 @@
 	vertical-align: middle;
 	background: url(../images/btn-subscribe.png) no-repeat;
 }
-.food-container .subscribe:focus:after{
+.food-container .unsubscribe{
+	position: relative;
+    display: inline-block;
+	width: 186px;
+	height: 81px;
+	vertical-align: middle;
+	background: url(../images/btn-unsubscribe.png) no-repeat;
+}
+.food-container .subscribe:focus:after, .food-container .unsubscribe:focus:after{
 	content: "";
 	position: absolute;
 	width: 186px;

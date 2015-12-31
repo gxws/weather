@@ -46,17 +46,29 @@
 	background: url(../images/circular.png) no-repeat;
 }
 .circul-content .rank{
-	display: inline-block;
-	vertical-align: middle;
+	float: left;
 }
-.circul-content .img{
-	margin-left: 15px;
-    margin-right: 20px;
+.circul-content .rank:first-child {
+	padding-top: 6px;
+	width: 90px;
+	overflow: hidden;
+}
+.circul-content .rank:nth-child(2) {
+	width: 100px;
+	height: 68px;
+}
+.circul-content .rank:last-child {
+	padding-top: 6px;
+	width: 150px;
+	overflow: hidden;
 }
 .map .circul-content .list{
 	display: inline-block;
 	border-bottom: 1px solid #ffffff;
 	width: 344px;
+}
+.map .circul-content .list:last-child {
+	border: none;
 }
 .map .circul-content .list:first-child{
 	padding-top:18px; 

@@ -46,9 +46,9 @@
 					{{each nn.list as v i}}
 						<div class="list">
 							<div class="rank">
-								<div class="date">{{v.name}}</div>
-								<div class="day">{{v.date}}</div></div>
-							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData: ""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
 							<div class="rank">
 								<div>{{v.weather}}</div>
 								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
@@ -59,9 +59,9 @@
 					{{each gl.list as v i}}
 						<div class="list">
 							<div class="rank">
-								<div class="date">{{v.name}}</div>
-								<div class="day">{{v.date}}</div></div>
-							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
 							<div class="rank">
 								<div>{{v.weather}}</div>
 								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
@@ -72,9 +72,9 @@
 					{{each bs.list as v i}}
 						<div class="list">
 							<div class="rank">
-								<div class="date">{{v.name}}</div>
-								<div class="day">{{v.date}}</div></div>
-							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
 							<div class="rank">
 								<div>{{v.weather}}</div>
 								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
@@ -85,9 +85,9 @@
 					{{each hc.list as v i}}
 						<div class="list">
 							<div class="rank">
-								<div class="date">{{v.name}}</div>
-								<div class="day">{{v.date}}</div></div>
-							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
 							<div class="rank">
 								<div>{{v.weather}}</div>
 								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
@@ -98,9 +98,9 @@
 					{{each lz.list as v i}}
 						<div class="list">
 							<div class="rank">
-								<div class="date">{{v.name}}</div>
-								<div class="day">{{v.date}}</div></div>
-							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
 							<div class="rank">
 								<div>{{v.weather}}</div>
 								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
@@ -111,9 +111,113 @@
 					{{each hz.list as v i}}
 						<div class="list">
 							<div class="rank">
-								<div class="date">{{v.name}}</div>
-								<div class="day">{{v.date}}</div></div>
-							<div class="rank img"><img src="{{v.img}}" widht="85" height="68"></div>
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-wz" class="circul-content {{if !wz.current}}hidden{{/if}}">
+					{{each wz.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-lb" class="circul-content {{if !lb.current}}hidden{{/if}}">
+					{{each lb.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-gg" class="circul-content {{if !gg.current}}hidden{{/if}}">
+					{{each gg.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-yl" class="circul-content {{if !yl.current}}hidden{{/if}}">
+					{{each yl.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-bh" class="circul-content {{if !bh.current}}hidden{{/if}}">
+					{{each bh.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-qz" class="circul-content {{if !qz.current}}hidden{{/if}}">
+					{{each qz.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-fcg" class="circul-content {{if !fcg.current}}hidden{{/if}}">
+					{{each fcg.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
+							<div class="rank">
+								<div>{{v.weather}}</div>
+								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
+						</div>
+					{{/each}}
+				</div>
+				<div id="weather-cz" class="circul-content {{if !cz.current}}hidden{{/if}}">
+					{{each cz.list as v i}}
+						<div class="list">
+							<div class="rank">
+								<div class="date">{{v.date | formatData:""}}</div>
+								<div class="day">{{v.date | getFormatData:""}}</div></div>
+							<div class="rank"><img src="{{v.img}}" widht="85" height="68"></div>
 							<div class="rank">
 								<div>{{v.weather}}</div>
 								<div>{{v.du.min}}℃/{{v.du.max}}℃</div></div>			
@@ -164,6 +268,20 @@
 		</div>
 	</script>
 	<script type="text/javascript">
+		template.helper('getFormatData', function(date){
+			var date = new Date(date);
+			return (date.getMonth() + 1) + '/' + date.getDate();
+		});
+		template.helper('formatData', function(date){
+			var days=["周日","周一","周二","周三","周四","周五","周六"];
+			var date = new Date(date);
+			var today = new Date().getDay();
+			if(date.getDay() === today){
+				return "今天";
+			}else{
+				return days[date.getDay()];
+			}
+		});
 		var data = {
 			headers: [{
 				href: "#",
@@ -195,8 +313,7 @@
 				href: "#nn",
 				current: false,
 				list: [{
-					name: "今天",
-					date: "09/25",
+					date: "2015/12/28",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -204,8 +321,7 @@
 						max: 30
 					}
 				},{
-					name: "明天",
-					date: "09/26",
+					date: "2015/12/29",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -215,11 +331,9 @@
 				}]
 			},
 			gl: {
-				href: "#gl",
 				current: true,
 				list: [{
-					name: "gl",
-					date: "09/25",
+					date: "2015/12/28",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -227,8 +341,31 @@
 						max: 30
 					}
 				},{
-					name: "明天",
-					date: "09/26",
+					date: "2015/12/29",
+					img: "../public/images/yin.png",
+					weather: "多云",
+					du: {
+						min: 2,
+						max: 3
+					}
+				},{
+					date: "2015/12/28",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					date: "2015/12/29",
+					img: "../public/images/yin.png",
+					weather: "多云",
+					du: {
+						min: 2,
+						max: 3
+					}
+				},{
+					date: "2015/12/28",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -241,8 +378,7 @@
 				href: "#bs",
 				current: false,
 				list: [{
-					name: "bs",
-					date: "09/25",
+					date: "2015/12/28",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -250,8 +386,7 @@
 						max: 30
 					}
 				},{
-					name: "明天",
-					date: "09/26",
+					date: "2015/12/29",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -264,8 +399,7 @@
 				href: "#hc",
 				current: false,
 				list: [{
-					name: "hc",
-					date: "09/25",
+					date: "2015/12/28",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -273,8 +407,7 @@
 						max: 30
 					}
 				},{
-					name: "明天",
-					date: "09/26",
+					date: "2015/12/29",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -287,8 +420,7 @@
 				href: "#lz",
 				current: false,
 				list: [{
-					name: "lz",
-					date: "09/25",
+					date: "2015/12/28",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -296,8 +428,7 @@
 						max: 30
 					}
 				},{
-					name: "明天",
-					date: "09/26",
+					date: "2015/12/29",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -310,8 +441,7 @@
 				href: "#hz",
 				current: false,
 				list: [{
-					name: "hz",
-					date: "09/25",
+					date: "2015/12/28",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -319,8 +449,175 @@
 						max: 30
 					}
 				},{
-					name: "明天",
-					date: "09/26",
+					date: "2015/12/29",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			wz: {
+				href: "#wz",
+				current: false,
+				list: [{
+					date: "2015/12/28",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					date: "2015/12/29",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			lb: {
+				href: "#lb",
+				current: false,
+				list: [{
+					date: "2015/12/28",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					date: "2015/12/29",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			gg: {
+				href: "#gg",
+				current: false,
+				list: [{
+					date: "2015/12/28",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					date: "2015/12/29",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			yl: {
+				href: "#yl",
+				current: false,
+				list: [{
+					date: "2015/12/28",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					date: "2015/12/29",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			bh: {
+				href: "#bh",
+				current: false,
+				list: [{
+					date: "2015/12/28",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					date: "2015/12/29",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			qz: {
+				href: "#qz",
+				current: false,
+				list: [{
+					date: "2015/12/28",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					date: "2015/12/29",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			fcg: {
+				href: "#fcg",
+				current: false,
+				list: [{
+					date: "2015/12/28",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					date: "2015/12/29",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				}]
+			},
+			cz: {
+				href: "#hz",
+				current: false,
+				list: [{
+					date: "2015/12/28",
+					img: "../public/images/yin.png",
+					weather: "多云转阵雨",
+					du: {
+						min: 25,
+						max: 30
+					}
+				},{
+					date: "2015/12/29",
 					img: "../public/images/yin.png",
 					weather: "多云转阵雨",
 					du: {
@@ -332,7 +629,39 @@
 		};
 		var html = template('templateId', data);
 		document.getElementById('root').innerHTML = html;
-		mapFocus('gl');
+		var cityid = "";
+		if(data.nn.current) {
+			cityid = 'nn';
+		}else if(data.gl.current){
+			cityid = 'gl';
+		}else if(data.lz.current){
+			cityid = 'lz';
+		}else if(data.bs.current){
+			cityid = 'bs';
+		}else if(data.hc.current){
+			cityid = 'hc';
+		}else if(data.lb.current){
+			cityid = 'lb';
+		}else if(data.wz.current){
+			cityid = 'wz';
+		}else if(data.hz.current){
+			cityid = 'hz';
+		}else if(data.gg.current){
+			cityid = 'gg';
+		}else if(data.yl.current){
+			cityid = 'yl';
+		}else if(data.qz.current){
+			cityid = 'qz';
+		}else if(data.bh.current){
+			cityid = 'bh';
+		}else if(data.fcg.current){
+			cityid = 'fcg';
+		}else if(data.cz.current){
+			cityid = 'cz';
+		}else{
+			cityid = 'nn';
+		}
+		mapFocus(cityid);
 		var mapA = document.querySelectorAll('.map-a a');
 		var arr = Array.prototype.slice.call(mapA);
 		arr.forEach(function(v, i){
@@ -356,8 +685,8 @@
 			var index = index || 0;
 			document.querySelectorAll('.con-footer a')[index].focus();
 		}
-		function mapFocus(defaultCityId){
-			var cityid = defaultCityId || 'nn';
+		function mapFocus(cityId){
+			var cityid = cityId;
 			var cityA = document.getElementById(cityid);
 			var attr = cityA.getAttribute('data-map');
 				attr = eval('(' + attr + ')'); 
