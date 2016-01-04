@@ -80,8 +80,8 @@
 	margin-top: 12px;
 	margin-left: 16px;
 	margin-right: 16px;
-	height: 60px;
-	font-size: 26px;
+	height: 64px;
+	font-size: 28px;
 	color: #ffffff;
 	font-weight: normal;
 	overflow: hidden;
@@ -104,6 +104,12 @@
 }
 .weather-life-item-tag a {
 	color: #0a0a0a;
+}
+.weather-life-item-tag .breadcrumb-slash {
+	margin-left: 10px;
+}
+.weather-life-item-tag .breadcrumb-slash:last-child {
+	display: none;
 }
 .weather-life-item-tag a:focus {
 	color: #ffaa00;

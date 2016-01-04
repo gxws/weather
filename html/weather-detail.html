@@ -1,230 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<title>天气详情-趋向</title> 
-	<link rel="stylesheet" href="../public/css/detail.css">
-	<!-- <link rel="stylesheet" href="../public/css/weather-trend.css">
-	<link rel="stylesheet" href="../public/css/weather-expon.css"> -->
 	<link rel="stylesheet" href="../public/css/common.css">
+	<link rel="stylesheet" href="../public/css/detail.css">
+	<script src="../public/js/template.js"></script>
 </head>
-<body style="background: url('../public/images/bg-rain.jpg') no-repeat;">
-	<div class="detail-container">
-		<div class="detail-content"> 
-			<div class="show-city">南宁</div>
-			<div class="text-border" id="J_list">
-				<a class="bg-county disp" href="javascript:;"><img src="../public/images/dot.gif" /></a>
-				<a class="bg-trend disp" href="javascript:;"><img src="../public/images/dot.gif" /></a>
-				<a class="bg-expon disp" href="javascript:;"><img src="../public/images/dot.gif" /></a>
-			</div>
-			<div class="transparent-bg">
-				<div class="county transparent-box">
-					<div class="list-container">
-						<ul class="list">
-							<li >
-								<div class="show-county">武鸣</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li>
-								<div class="show-county">隆安</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li>
-								<div class="show-county">马山</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li>
-								<div class="show-county">上林</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li>
-								<div class="show-county">宾阳</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li >
-								<div class="show-county">横县</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li >
-								<div class="show-county">武鸣</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li>
-								<div class="show-county">隆安</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li>
-								<div class="show-county">马山</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li>
-								<div class="show-county">上林</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li>
-								<div class="show-county">宾阳</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-							<li >
-								<div class="show-county">横县</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="change">多云转阵雨</div>
-								<div class="temper">20℃/38℃</div>
-							</li>
-						</ul>
-					</div></div>
-				<div class="trend transparent-box">
-					<div class="list-container">
-						<ul class="list">
-							<li>
-								<div class="trend-day">9/28</div>
-								<img src="../public/images/yin.png"style="width:88px ;height:74px;">
-								<div class="trend-weather">阴</div>
-								<div class="progress">
-									<div class="weather-min">20</div>
-									<div class="weather-max" style="height:100%">40</div>
-								</div>
-							</li>
-							<li>
-								<div class="trend-day">9/28</div>
-								<img src="../public/images/sun-cloud.png"style="width:88px ;height:74px;">
-								<div class="trend-weather">多云</div>
-								<div class="progress">
-									<div class="weather-min">20</div>
-									<div class="weather-max" style="height:100%">40</div>
-								</div>
-							</li>
-							<li>
-								<div class="trend-day">9/28</div>
-								<img src="../public/images/zhenyu.png"style="width:88px ;height:74px;">
-								<div class="trend-weather">阵雨</div>
-								<div>
-									<div class="min-temp" style="height:40px;">20°</div>
-									<div class="max-temp" style="height:200px;">40°</div>
-								</div>
-							</li>
-							<li>
-								<div class="trend-day">9/28</div>
-								<img src="../public/images/zhenyu.png"style="width:88px ;height:74px;">
-								<div class="trend-weather">阵雨</div>
-								<div>
-									<div class="min-temp" style="height:40px;">20°</div>
-									<div class="max-temp" style="height:200px;">40°</div>
-								</div>
-							</li>
-							<li>
-								<div class="trend-day">9/28</div>
-								<img src="../public/images/sunny.png"style="width:88px ;height:74px;">
-								<div class="trend-weather">晴</div>
-								<div>
-									<div class="min-temp" style="height:40px;">20°</div>
-									<div class="max-temp" style="height:200px;">40°</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="expon transparent-box">
-					<div class="list-container">
-						<ul class="list">
-							<li>
-								<img src="../public/images/ex-quality.png"style="width:110px ;height:64px;">
-								<div class="expon-weather">空气质量</div>
-								<div class="situation">良好</div>
-							</li>
-							<li>
-								<img src="../public/images/ex-wind.png"style="width:100px ;height:64px;">
-								<div class="expon-weather">风向</div>
-								<div class="situation">北风3级</div>
-							</li>
-							<li>
-								<img src="../public/images/ex-rays.png"style="width:100px ;height:64px;">
-								<div class="expon-weather">紫外线</div>
-								<div class="situation">较强</div>
-							</li>
-							<li>
-								<img src="../public/images/ex-start .png"style="width:100px ;height:64px;">
-								<div class="expon-weather">日出时间</div>
-								<div class="situation">5:55</div>
-							</li>
-							<li>
-								<img src="../public/images/ex-end.png"style="width:100px ;height:64px;">
-								<div class="expon-weather">日落时间</div>
-								<div class="situation">18:02</div>
-							</li>
-							<li>
-								<img src="../public/images/ex-comfort.png"style="width:110px ;height:64px;">
-								<div class="expon-weather">穿衣</div>
-								<div class="situation">清爽</div>
-							</li>
-							<li>
-								<img src="../public/images/ex-outdoor.png"style="width:100px ;height:64px;">
-								<div class="expon-weather">出行</div>
-								<div class="situation">适宜</div>
-							</li>
-							<li>
-								<img src="../public/images/ex-dress.png"style="width:100px ;height:64px;">
-								<div class="expon-weather">湿度</div>
-								<div class="situation">干爽</div>
-							</li>
-							<li>
-								<img src="../public/images/ex-go-out.png"style="width:100px ;height:64px;">
-								<div class="expon-weather">日出时间</div>
-								<div class="situation">5:55</div>
-							</li>
-							<li>
-								<img src="../public/images/ex-humidity.png"style="width:100px ;height:64px;">
-								<div class="expon-weather">日落时间</div>
-								<div class="situation">18:02</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div id="footer">
-		<div class="footer-menu">
-			<span id="menu1" class="menu-1"></span>
-			<span id="menu2" class="menu-2"></span>
-			<span id="menu3" class="menu-3"></span>
-			<span id="menu4" class="menu-4"></span>
-		</div>
-	</div>
-
-
-	<div id="controller">
-		<div class="con-footer">
-			<a href="#" onfocus="addFocus('#menu1')" onblur="removeFocus('#menu1')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu2')" onblur="removeFocus('#menu2')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu3')" onblur="removeFocus('#menu3')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu4')" onblur="removeFocus('#menu4')"><img src="../public/images/dot.gif" /></a>
-		</div>
-	</div>
+<body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
+	<div id="root"></div>
+		
 	<script src="../public/js/common.js"></script>
+	<script id="templateId" type="text/html">
+		<div class="detail-container">
+			<div class="detail-content"> 
+				<div class="show-city">{{cityname}}</div>
+				<div class="text-border" id="J_list">
+					<a class="bg-county disp" href="javascript:;"><img src="../public/images/dot.gif" /></a>
+					<a class="bg-trend disp" href="javascript:;"><img src="../public/images/dot.gif" /></a>
+					<a class="bg-expon disp" href="javascript:;"><img src="../public/images/dot.gif" /></a>
+				</div>
+				<div class="transparent-bg">
+					<div class="county transparent-box">
+						<div class="list-container">
+							<ul class="list">
+								{{each county as v i}}
+									<li >
+										<div class="show-county">{{v.name}}</div>
+										<img src="{{v.weatherimg}}" style="width:88px ;height:74px;">
+										<div class="change">{{v.weather}}</div>
+										<div class="temper">{{v.du.min}}℃/{{v.du.max}}℃</div>
+									</li>
+								{{/each}}
+							</ul>
+						</div></div>
+					<div class="trend transparent-box">
+						<div class="list-container">
+							<ul class="list">
+								{{each trend as v i}}
+									<li>
+										<div class="trend-day">{{v.date}}</div>
+										<img src="{{v.weatherimg}}" style="width:88px ;height:74px;">
+										<div class="trend-weather">{{v.weather}}</div>
+										<div class="progress">
+											<div class="weather-min" style="height:{{(v.du.min/40 * 100) > 100 ? 100 : v.du.min/40 * 100}}%"><span>{{v.du.min}}</span></div>
+											<div class="weather-max" style="height:{{(v.du.max/40 * 100) > 100 ? 100 : v.du.max/40 * 100}}%"><span>{{v.du.max}}</span></div>
+										</div>
+									</li>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+					<div class="expon transparent-box">
+						<div class="list-container">
+							<ul class="list">
+								{{each expon as v i}}
+									<li>
+										<img src="{{v.weatherimg}}" style="width:110px ;height:64px;">
+										<div class="expon-weather">{{v.title}}</div>
+										<div class="situation">{{v.quality}}</div>
+									</li>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="footer-menu">
+				<span id="menu1" class="menu-1"></span>
+				<span id="menu2" class="menu-2"></span>
+				<span id="menu3" class="menu-3"></span>
+				<span id="menu4" class="menu-4"></span>
+			</div>
+		</div>
+		<div id="controller">
+			<div class="con-footer">
+				{{each footers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#menu{{i+1}}')" onblur="removeFocus('#menu{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+		</div>
+	</script>
 	<script type="text/javascript">
+		var data = {
+			footers: [{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			}],
+			cityname: "南宁",
+			county: [{
+				name: "武鸣武鸣武鸣武鸣武鸣武鸣武鸣",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 20,
+					max: 30
+				}
+			},{
+				name: "上林",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 20,
+					max: 30
+				}
+			},{
+				name: "上林",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 20,
+					max: 30
+				}
+			},{
+				name: "上林",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 20,
+					max: 30
+				}
+			},{
+				name: "上林",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 20,
+					max: 30
+				}
+			},{
+				name: "上林",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 20,
+					max: 30
+				}
+			},{
+				name: "上林",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 20,
+					max: 30
+				}
+			}],
+			trend: [{
+				date: "09/28",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 35,
+					max: 48
+				}
+			},{
+				date: "09/29",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "阴",
+				du: {
+					min: 2,
+					max: 30
+				}
+			},{
+				date: "09/28",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 35,
+					max: 48
+				}
+			},{
+				date: "09/28",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 35,
+					max: 48
+				}
+			},{
+				date: "09/28",
+				weatherimg: "../public/images/sun-cloud.png",
+				weather: "多云转阵雨",
+				du: {
+					min: 35,
+					max: 48
+				}
+			}],
+			expon: [{
+				weatherimg: "../public/images/ex-quality.png",
+				quality: "良好",
+				title: "空气质量"
+
+			},{
+				weatherimg: "../public/images/ex-wind.png",
+				quality: "北风3级",
+				title: "风向"
+
+			},{
+				weatherimg: "../public/images/ex-wind.png",
+				quality: "北风3级",
+				title: "风向"
+
+			},{
+				weatherimg: "../public/images/ex-wind.png",
+				quality: "北风3级",
+				title: "风向"
+
+			},{
+				weatherimg: "../public/images/ex-wind.png",
+				quality: "北风3级",
+				title: "风向"
+
+			},{
+				weatherimg: "../public/images/ex-wind.png",
+				quality: "北风3级",
+				title: "风向"
+
+			},{
+				weatherimg: "../public/images/ex-wind.png",
+				quality: "北风3级",
+				title: "风向"
+
+			},{
+				weatherimg: "../public/images/ex-wind.png",
+				quality: "北风3级",
+				title: "风向"
+
+			},{
+				weatherimg: "../public/images/ex-wind.png",
+				quality: "北风3级",
+				title: "风向"
+
+			}]
+		};
+		var html = template('templateId', data);
+		document.getElementById('root').innerHTML = html;
+
 		var nav = document.querySelectorAll('#J_list a');
 			nav = Array.prototype.slice.call(nav);
 		nav.forEach(function(v, i){

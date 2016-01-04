@@ -5,112 +5,216 @@
 	<title>实时推荐</title>
 	<link rel="stylesheet" href="../public/css/common.css" />
 	<link rel="stylesheet" href="../public/css/weather-recommend.css">
+	<script src="../public/js/template.js"></script>
 </head>
 <body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
-	<div id="header">
-		<div class="header-nav">
-			<span id="nav1" class="nav-1 active"></span>
-			<span id="nav2" class="nav-2"></span>
-			<span id="nav3" class="nav-3"></span>
-			<span id="nav4" class="nav-4"></span>
-			<span id="nav5" class="nav-5"></span>
-		</div>
-	</div>
-	<div id="recommend-container">
-		<div id="recommend-weather" class="recommend-weather">
-			<div class="recommend-weather-city">
-				<span class="city-name">南宁</span>
-				<span class="date">09/25</span>
-			</div>
-			<img class="weather-theme" src="../public/images/duoyun.png" />
-			<div class="recommend-weather-info">
-				<span class="recommend-weather-info-text">多云</span>
-				<span class="recommend-weather-info-du">29℃/34℃</span>
-			</div>
-			<div class="recommend-weather-future">
-				<div class="recommend-weather-future-item">
-					<span class="date">09/26</span>
-					<img class="weather-img" src="../public/images/duoyun.png" />
-					<span class="du">29℃/34℃</span>
-				</div>
-				<div class="recommend-weather-future-item">
-					<span class="date">09/27</span>
-					<img class="weather-img" src="../public/images/duoyun.png" />
-					<span class="du">29℃/34℃</span>
-				</div>
-			</div>
-			<a href="#" onfocus="addFocus('#recommend-weather')" onblur="removeFocus('#recommend-weather')"><img src="../public/images/dot.gif" /></a>
-		</div>
-		<div class="recommend-slide">
-			<ul class="recommend-slide-ul">
-				<li class="recommend-slide-list">
-					<img class="recommend-slide-list-img" src="../uploads/image2.png" />
-					<p class="recommend-slide-description">高温环境对人体是个严峻的考验每个人的热耐受能力也是不同的，研究表明获得或提高热耐受能</p>
-					<div class="icon-play recommend-slide-paly"></div>
-				</li>
-				<li class="recommend-slide-list">
-					<img class="recommend-slide-list-img" src="../uploads/image2.png" />
-					<p class="recommend-slide-description">123</p>
-					<div class="icon-play recommend-slide-paly"></div>
-				</li>
-			</ul>
-			<div class="recommend-slide-select">
-				<span></span>
-				<span></span>
-			</div>
-			<div id="con-slide" class="con-recommend-slide">
-				<a href="#" video><img src="../public/images/dot.gif" /></a>
-				<a href="#" ><img src="../public/images/dot.gif" /></a>
-			</div>
-		</div>
-		<div class="recommend-list">
-			<div id="recommend-item1" class="recommend-item">
-				<img class="recommend-item-img" src="../uploads/image1.png" />
-				<div class="recommend-item-title">气象新媒体</div>
-				<div class="recommend-item-mask"></div>
-				<a href="#" onfocus="addFocus('#recommend-item1')" onblur="removeFocus('#recommend-item1')"><img src="../public/images/dot.gif" /></a>
-			</div>
-			<div id="recommend-item2" class="recommend-item">
-				<img class="recommend-item-img" src="../uploads/image1.png" />
-				<div class="recommend-item-title">气象新媒体</div>
-				<div class="recommend-item-mask"></div>
-				<a href="#" onfocus="addFocus('#recommend-item2')" onblur="removeFocus('#recommend-item2')"><img src="../public/images/dot.gif" /></a>
-			</div>
-			<div id="recommend-item3" class="recommend-item">
-				<img class="recommend-item-img" src="../uploads/image1.png" />
-				<div class="recommend-item-title">气象新媒体</div>
-				<div class="recommend-item-mask"></div>
-				<a href="#" onfocus="addFocus('#recommend-item3')" onblur="removeFocus('#recommend-item3')"><img src="../public/images/dot.gif" /></a>
-			</div>
-			<div class="recommend-shadow"></div>
-		</div>
-	</div>
-	<div id="footer">
-		<div class="footer-menu">
-			<span id="menu1" class="menu-1"></span>
-			<span id="menu2" class="menu-2"></span>
-			<span id="menu3" class="menu-3"></span>
-			<span id="menu4" class="menu-4"></span>
-		</div>
-	</div>
-
-	<div id="controller">
-		<div class="con-header">
-			<a href="#" onfocus="addFocus('#nav1')" onblur="removeFocus('#nav1')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav2')" onblur="removeFocus('#nav2')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav3')" onblur="removeFocus('#nav3')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav4')" onblur="removeFocus('#nav4')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#nav5')" onblur="removeFocus('#nav5')"><img src="../public/images/dot.gif" /></a>
-		</div>
-		<div class="con-footer">
-			<a href="#" onfocus="addFocus('#menu1')" onblur="removeFocus('#menu1')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu2')" onblur="removeFocus('#menu2')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu3')" onblur="removeFocus('#menu3')"><img src="../public/images/dot.gif" /></a>
-			<a href="#" onfocus="addFocus('#menu4')" onblur="removeFocus('#menu4')"><img src="../public/images/dot.gif" /></a>
-		</div>
-	</div>
-
+	<div id="root"></div>
 	<script src="../public/js/common.js"></script>
+	<script id="templateId" type="text/html">
+		<div id="header">
+			<div class="header-nav">
+				{{each headers as v i}}
+					<span id="nav{{i+1}}" class="nav-{{i+1}} {{if v.active}}active{{/if}}"></span>
+				{{/each}}
+			</div>
+		</div>
+		<div id="recommend-container">
+			<div id="recommend-weather" class="recommend-weather">
+				<div class="recommend-weather-city">
+					<span class="city-name">{{weather.city | cityFormat}}</span>
+					<span class="date">{{weather.today}}</span>
+				</div>
+				<img class="weather-theme" src="{{weather.weatherimg}}" />
+				<div class="recommend-weather-info">
+					<span class="recommend-weather-info-text">{{weather.weathertitle}}</span>
+					<span class="recommend-weather-info-du">{{weather.du.min}}℃/{{weather.du.max}}℃</span>
+				</div>
+				<div class="recommend-weather-future">
+					<div class="recommend-weather-future-item">
+						<span class="date">{{weather.tomorrow.date}}</span>
+						<img class="weather-img" src="{{weather.tomorrow.weatherimg}}" />
+						<span class="du">{{weather.tomorrow.du.min}}℃/{{weather.tomorrow.du.max}}℃</span>
+					</div>
+					<div class="recommend-weather-future-item">
+						<span class="date">{{weather.aftertomorrow.date}}</span>
+						<img class="weather-img" src="{{weather.aftertomorrow.weatherimg}}" />
+						<span class="du">{{weather.aftertomorrow.du.min}}℃/{{weather.aftertomorrow.du.max}}℃</span>
+					</div>
+				</div>
+				<a href="{{weather.href}}" onfocus="addFocus('#recommend-weather')" onblur="removeFocus('#recommend-weather')"><img src="../public/images/dot.gif" /></a>
+			</div>
+			<div class="recommend-slide">
+				<ul class="recommend-slide-ul">
+					{{each slides as v i}}
+						<li class="recommend-slide-list">
+							<img class="recommend-slide-list-img" src="{{v.img | defaultImg:'../public/images/default/default2.png'}}" />
+							<p class="recommend-slide-description">{{v.text}}</p>
+							<div class="icon-play recommend-slide-paly"></div>
+						</li>
+					{{/each}}
+				</ul>
+				<div class="recommend-slide-select">
+					{{each slides as v i}}
+						<span></span>
+					{{/each}}
+				</div>
+				<div id="con-slide" class="con-recommend-slide">
+					{{each slides as v i}}
+						<a href="{{v.href}}" {{if v.video}}video{{/if}}><img src="../public/images/dot.gif" /></a>
+					{{/each}}
+				</div>
+			</div>
+			<div class="recommend-list">
+				{{each lists as v i}}
+					<div id="recommend-item{{i+1}}" class="recommend-item">
+						<img class="recommend-item-img" src="{{v.img | defaultImg:'../public/images/default/default1.png'}}" />
+						<div class="recommend-item-title">{{v.title}}</div>
+						<div class="recommend-item-mask"></div>
+						<a href="#" onfocus="addFocus('#recommend-item{{i+1}}'), addMarquee('#recommend-item{{i+1}}', 11)" onblur="removeFocus('#recommend-item{{i+1}}'), removeMarquee('#recommend-item{{i+1}}', 11)"><img src="../public/images/dot.gif" /></a>
+					</div>
+					{{if i === 2}}
+						<div class="recommend-shadow"></div>
+					{{/if}}
+				{{/each}}
+			</div>
+		</div>
+		<div id="footer">
+			<div class="footer-menu">
+				<span id="menu1" class="menu-1"></span>
+				<span id="menu2" class="menu-2"></span>
+				<span id="menu3" class="menu-3"></span>
+				<span id="menu4" class="menu-4"></span>
+			</div>
+		</div>
+
+		<div id="controller">
+			<div class="con-header">
+				{{each headers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#nav{{i+1}}')" onblur="removeFocus('#nav{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+			<div class="con-footer">
+				{{each footers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#menu{{i+1}}')" onblur="removeFocus('#menu{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+		</div>
+	</script>
+	<script type="text/javascript">
+		template.helper('defaultImg', function(img, defimg) {
+	        var defimg = defimg;
+	        if (!img) {
+	            img = defimg;
+	        }
+	        return img;
+	    });
+	    template.helper('cityFormat', function(city) {
+	        var reg = new RegExp("市$");
+	        return city.replace(reg, "");
+	    });
+		var data = {
+			headers: [{
+				href: "#",
+				active: true
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			}],
+			footers: [{
+				href: "#",
+			},{
+				href: "javascript:window.history.go(-1);",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			}],
+			weather: {
+				city: "南宁市",
+				today: "09/25",
+				weatherimg: "../public/images/duoyun.png",
+				href: "#",
+				weathertitle: "多云",
+				du: {
+					min: 20,
+					max: 34
+				},
+				tomorrow: {
+					date: '09/26',
+					weatherimg: "../public/images/duoyun.png",
+					du: {
+						min: 20,
+						max: 34
+					}
+				},
+				aftertomorrow: {
+					date: '09/27',
+					weatherimg: "../public/images/duoyun.png",
+					du: {
+						min: 20,
+						max: 34
+					}
+				}
+			},
+			slides: [{
+				text: "高温环境对人体是个严峻的考验每个人的热耐受能力也是不同的，研究表明获得或提高热耐受能",
+				img: "../uploads/image2.png",
+				href: "#",
+				video: true
+			},{
+				text: "高温环境对人体",
+				img: "",
+				href: "#",
+				video: false
+			}],
+			lists: [{
+				title: "气象新媒体气象新媒体气象新媒体",
+				img: "",
+				href: "#"
+			},{
+				title: "气象新媒体2",
+				img: "",
+				href: "#"
+			},{
+				title: "气象新媒体3",
+				img: "../uploads/image1.png",
+				href: "#"
+			}]
+		}
+		var html = template('templateId', data);
+		document.getElementById('root').innerHTML = html;
+
+		var title = "";
+		function addMarquee(id, size){
+			size = size || 0;
+			var reg = new RegExp("(<|<\/)marquee>", "g");
+			var element = document.querySelector(id);
+			title = element.children[1].innerHTML.replace(reg, "");
+			if(title.length > size){
+				element.children[1].innerHTML = "<marquee>"+title+"</marquee>";
+			}
+		}
+		function removeMarquee(id, size){
+			size = size || 0;
+			var element = document.querySelector(id);
+			if(!title) {
+				var reg = new RegExp("(<|<\/)marquee>", "g");
+				title = element.children[1].innerHTML.replace(reg, "");
+			}
+			if(title.length > size){
+				element.children[1].innerHTML = title;
+			}
+		}
+	</script>
 	<script src="../public/js/recommend.js"></script>
 </body>
 </html>

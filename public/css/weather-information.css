@@ -1,3 +1,6 @@
+.hidden {
+	display: none;
+}
 .infor-container{
 	position: absolute;
 	top:0px;
@@ -43,23 +46,32 @@
 	background: url(../images/circular.png) no-repeat;
 }
 .circul-content .rank{
-	display: inline-block;
-	vertical-align: middle;
+	float: left;
 }
-.circul-content .img{
-	margin-left: 15px;
-    margin-right: 20px;
+.circul-content .rank:first-child {
+	padding-top: 6px;
+	width: 90px;
+	overflow: hidden;
 }
-.map .circul-content .list1{
-	padding-top:18px; 
+.circul-content .rank:nth-child(2) {
+	width: 100px;
+	height: 68px;
 }
-.map .circul-content .list1,.list2,.list3,.list4{
+.circul-content .rank:last-child {
+	padding-top: 6px;
+	width: 150px;
+	overflow: hidden;
+}
+.map .circul-content .list{
 	display: inline-block;
 	border-bottom: 1px solid #ffffff;
 	width: 344px;
 }
-.map .circul-content .list5{
-	display: inline-block;
+.map .circul-content .list:last-child {
+	border: none;
+}
+.map .circul-content .list:first-child{
+	padding-top:18px; 
 }
 .map-content{
 	position: absolute;
@@ -207,91 +219,15 @@
 .map-content .hz.focus{
 	background: url(../images/gx-hz.png)no-repeat;
 }
-.con-header{
-	width: 1000px;
-	margin-left: 100px;
-}
-#controller .con-header a{
-	width: 16%;
-	margin-left:5px;
-	height:10px;
-	background: #000;
-}
-.con-information-1,.con-information-2,.con-information-3,
-.con-information-4,.con-information-5{
-	top:60px;
-    position: absolute;
-    top: 20px;
-    left: 50px;
-    width: 600px;
-}
-.con-information-4{
-	width: 500px;
-}
-.con-information-2{
-	top:40px;
-    left: 566px;
-}
-.con-information-3{
-	top:60px;
-}
-.con-information-4{
-	top:80px;
-}
-.con-information-5{
-	top:100px;
-	left:288px;
-}
- .con-information-1 a,.con-information-2 a,.con-information-3 a,
- .con-information-4 a,.con-information-5 a{
-	width: 125px;
-    display: inline-block;
-    margin-left: 5px;
-    margin-top: 10px;
-	height:10px;
-	background: #000;
-}
-.con-information-2 a{
-	width: 40px;
-}
-.con-information-1 a:first-child,.con-information-3 a:first-child,.con-information-4 a:first-child{
-	width: 180px;
-	margin-left: -13px;
-}
-.con-information-5 a:first-child{
- width: 321px;
-}
-.con-information-4 a:first-child{
-	width: 100px;
-	margin-left: -13px;
-}
-.con-information-1 a:last-child,.con-information-3 a:last-child{
-    width: 73px;
-}
-.con-information-3 a:last-child{
-	width: 108px;
-}
-.con-information-4 a:last-child{
-	width: 108px;
+
+.map-a a {
+	display: inline-block;
 	position: absolute;
-	left: 450px;
+	top: 50px;
+	left: 800px;
+	width: 1px;
 }
-.con-information-5 a:last-child{
-    width: 124px;
-    position: absolute;
-    left: -117px;
-    top: 17px;
-}
-#controller .con-footer{
-	width: 900px;
-	margin-left: 50px;
-}
-#controller .con-footer a{
-	width: 24%;
-	margin-left: 5px;
-	height: 10px;
-	background: #000;
-}
-#controller .con-footer a:first-child{
-	width: 200px;
+.map-a .curr {
+	left: 0;
+	width: 100px;
 }

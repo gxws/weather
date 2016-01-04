@@ -38,49 +38,49 @@ li{
 	margin: 0 4px;
 }
 .nav-1 {
-	background: url('../images/nav-1.png');
+	background: url('../images/nav-1.png?__spriter');
 }
 .nav-2 {
-	background: url('../images/nav-2.png');
+	background: url('../images/nav-2.png?__spriter');
 }
 .nav-3 {
-	background: url('../images/nav-3.png');
+	background: url('../images/nav-3.png?__spriter');
 }
 .nav-4 {
-	background: url('../images/nav-4.png');
+	background: url('../images/nav-4.png?__spriter');
 }
 .nav-5 {
-	background: url('../images/nav-5.png');
+	background: url('../images/nav-5.png?__spriter');
 }
 .nav-1.active {
-	background: url('../images/nav-1-active.png');
+	background: url('../images/nav-1-active.png?__spriter');
 }
 .nav-2.active {
-	background: url('../images/nav-2-active.png');
+	background: url('../images/nav-2-active.png?__spriter');
 }
 .nav-3.active {
-	background: url('../images/nav-3-active.png');
+	background: url('../images/nav-3-active.png?__spriter');
 }
 .nav-4.active {
-	background: url('../images/nav-4-active.png');
+	background: url('../images/nav-4-active.png?__spriter');
 }
 .nav-5.active {
-	background: url('../images/nav-5-active.png');
+	background: url('../images/nav-5-active.png?__spriter');
 }
 .nav-1.focus {
-	background: url('../images/nav-1-focus.png');
+	background: url('../images/nav-1-focus.png?__spriter');
 }
 .nav-2.focus {
-	background: url('../images/nav-2-focus.png');
+	background: url('../images/nav-2-focus.png?__spriter');
 }
 .nav-3.focus {
-	background: url('../images/nav-3-focus.png');
+	background: url('../images/nav-3-focus.png?__spriter');
 }
 .nav-4.focus {
-	background: url('../images/nav-4-focus.png');
+	background: url('../images/nav-4-focus.png?__spriter');
 }
 .nav-5.focus {
-	background: url('../images/nav-5-focus.png');
+	background: url('../images/nav-5-focus.png?__spriter');
 }
 /* header end */
 
@@ -103,28 +103,28 @@ li{
 	margin: 0 15px;
 }
 .menu-1 {
-	background: url('../images/menu-1.png');
+	background: url('../images/menu-1.png?__spriter');
 }
 .menu-2 {
-	background: url('../images/menu-2.png');
+	background: url('../images/menu-2.png?__spriter');
 }
 .menu-3 {
-	background: url('../images/menu-3.png');
+	background: url('../images/menu-3.png?__spriter');
 }
 .menu-4 {
-	background: url('../images/menu-4.png');
+	background: url('../images/menu-4.png?__spriter');
 }
 .menu-1.focus {
-	background: url('../images/menu-1-focus.png');
+	background: url('../images/menu-1-focus.png?__spriter');
 }
 .menu-2.focus {
-	background: url('../images/menu-2-focus.png');
+	background: url('../images/menu-2-focus.png?__spriter');
 }
 .menu-3.focus {
-	background: url('../images/menu-3-focus.png');
+	background: url('../images/menu-3-focus.png?__spriter');
 }
 .menu-4.focus {
-	background: url('../images/menu-4-focus.png');
+	background: url('../images/menu-4-focus.png?__spriter');
 }
 /* footer end */
 
@@ -145,7 +145,7 @@ li{
 	position: absolute;
 	width: 70px;
 	height: 70px;
-	background: url('../images/btn-play.png') no-repeat;
+	background: url('../images/btn-play.png?__spriter') no-repeat;
 }
 /* 翻页箭头图标 */
 .prev, .next {
@@ -155,8 +155,10 @@ li{
 	height: 80px;
 }
 .prev {
-	background: url('../images/prev.png') no-repeat;
+	display: none;
+	background: url('../images/prev.png?__spriter') no-repeat;
 }
 .next {
-	background: url('../images/next.png') no-repeat;
+	display: none;
+	background: url('../images/next.png?__spriter') no-repeat;
 }

@@ -1,13 +1,10 @@
 (function() {
     "use strict";
-
+    console.log('简简单单的封装个分页插件，用法看源码，如确实看不懂 请联系我 %s-%s', '刚跌倒', 'gangdiedao@sina.cn');
     var root = this;
 
     template.helper('defaultImg', function(img, defimg) {
         var defimg = defimg;
-        if (!defimg) {
-            defimg = '../public/images/car-default.jpg';
-        }
         if (!img) {
             img = defimg;
         }
@@ -50,9 +47,11 @@
             next: "next", //下一页
             curr: 1, //客户端当前页
             size: 4, //每页显示个数
-            total: 1, //总记录数
+            total: "", //总记录数
             row: 4, //每行个数 用来做翻页控制
-            items: [] //数据
+            items: [], //数据
+            controller: true, //是否开启遥控器上下翻页
+            callback: "" //回调函数
         };
         var param = defaults;
         for (var key in options) {
@@ -60,7 +59,10 @@
         }
         param.total = param.total || param.items.length;
 
-        if (!param.template_id || !param.container_id || param.items.length === 0) return;
+        if (!param.template_id || !param.container_id || param.items.length === 0) {
+            if (param.callback) param.callback('', []);
+            return ;
+        }
 
         var loadData = function() {
             var start = 0;
@@ -76,8 +78,8 @@
                 "list": param.items.slice(start, start + param.size)
             }
             var html = template(param.template_id, data);
-            document.getElementById(param.container_id).innerHTML = html;
-
+            // document.getElementById(param.container_id).innerHTML = html;
+            if (param.callback) param.callback(html, data.list);
 
             if (pages === 1) {
                 prev.style.display = "none";
@@ -93,33 +95,41 @@
                 next.style.display = "block";
             }
 
-            var nodelist = document.querySelectorAll('#' + param.container_id + ' a') || [];
+            var nodelist = document.querySelectorAll('#' + param.container_id + ' .A') || [];
             nodelist = Array.prototype.slice.call(nodelist);
             // nodelist[0].focus();
             nodelist.forEach(function(element, index) {
-                if (index % param.row === param.row - 1) {
-                    element.onkeydown = function(e) {
-                        e = e || window.event;
-                        if (e.keyCode === 39) {
-                            if (param.curr < pages) {
-                                param.curr++
-                                    loadData();
-                            }
-                        }
-                    }
-                }
-                if (index % param.row === 0) {
-                    element.onkeydown = function(e) {
-                        e = e || window.event;
-                        if (e.keyCode === 37) {
-                            if (param.curr > 1) {
-                                param.curr--;
+                element.onkeydown = function(e) {
+                    e = e || window.event;
+                    if (e.keyCode === 39 && index % param.row === param.row - 1) {
+                        if (param.curr < pages) {
+                            param.curr++
                                 loadData();
-                            }
+                        }
+                    }else if(e.keyCode === 37 && index % param.row === 0) {
+                        if (param.curr > 1) {
+                            param.curr--;
+                            loadData();
                         }
                     }
                 }
             });
+            if(param.controller) {
+                document.onkeydown = function(e){
+                    e = e || window.event;
+                    if(e.keyCode === 34) {
+                        if (param.curr < pages) {
+                            param.curr++
+                            loadData();
+                        }
+                    }else if(e.keyCode === 33) {
+                         if (param.curr > 1) {
+                            param.curr--;
+                            loadData();
+                        }
+                    }
+                }
+            }
         }
         return loadData();
     }

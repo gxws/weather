@@ -13,26 +13,23 @@
 	color: #195b90;
 	vertical-align: middle;
 }
-.food-container .subscribe,.cancel-subscribe{
-    position: absolute;
+.food-container .subscribe{
+    position: relative;
     display: inline-block;
 	width: 186px;
 	height: 81px;
 	vertical-align: middle;
 	background: url(../images/btn-subscribe.png) no-repeat;
 }
-.cancel-subscribe{
-	display: none;
-	background: url(../images/btn-cancel-subscribe.png) no-repeat;
-}
-.food-container .subscribe:focus:after{
-	content: "";
-	position: absolute;
+.food-container .unsubscribe{
+	position: relative;
+    display: inline-block;
 	width: 186px;
 	height: 81px;
-	background: url(../images/focus-btn-home.png) no-repeat;
+	vertical-align: middle;
+	background: url(../images/btn-unsubscribe.png) no-repeat;
 }
-.food-container .cancel-subscribe:focus:after{
+.food-container .subscribe:focus:after, .food-container .unsubscribe:focus:after{
 	content: "";
 	position: absolute;
 	width: 186px;
@@ -43,10 +40,10 @@
 	position: absolute;
 	top:102px;
 	left:0;
-    font-size: 0;
-    width: 1180px;
+    width: 1080px;
 }
 .food-list{
+	float: left;
 	display: inline-block;
 	width: 360px;
 	height: 485px;
@@ -61,10 +58,15 @@
 	background: url(../images/food-border.png) no-repeat;
 }
 .food-img{
+	font-size: 18px;
     margin-top: 15px;
     margin-left: 14px;
 	width: 330px;
 	height: 230px;
+	-webkit-border-top-left-radius: 0.5em;
+	-webkit-border-top-right-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
 }
 
 .food-detail{
@@ -76,7 +78,7 @@
     padding-right: 15px;
 }
 .food-detail .food-title{   
-	font-size: 30px;
+	font-size: 28px;
 	overflow: hidden;
 	height:80px;
 	line-height: 80px;
@@ -84,7 +86,9 @@
 }
 .food-detail .title-detail{
 	font-size: 24px;
+	height: 96px;
 	line-height: 32px;
+	overflow: hidden;
 }
 #controller .con-footer{
 	width: 1000px;
@@ -106,5 +110,5 @@
 	left:-36px;
 }
 .food-content .next{
-	right:65px;
+	right:-36px;
 }
