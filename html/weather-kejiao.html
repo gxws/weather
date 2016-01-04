@@ -55,14 +55,14 @@
 	<script id="list" type="text/html">
 		{{each list as v i}}
 			<div id="weather-life-item{{i}}" class="weather-life-item">
-				<div class="weather-kejiao-box">
+				<div id="list{{i}}" class="weather-kejiao-box">
 					<img src="{{v.img | defaultImg: '../public/images/default/default4.png'}}" />
 					<div class="title">{{v.title}}</div>
 					<div class="mask"></div>
 					{{if i > 1}}
 						<div class="weather-kejiao-box-bg"></div>
 					{{/if}}
-					<a class="A" href="{{v.href}}" onfocus="addFocus('#weather-life-item{{i}}')" onblur="removeFocus('#weather-life-item{{i}}')"><img src="../public/images/dot.gif" /></a>
+					<a class="A" href="{{v.href}}" onfocus="addFocus('#weather-life-item{{i}}'), addMarquee('#list{{i}}',17)" onblur="removeFocus('#weather-life-item{{i}}'), removeMarquee('#list{{i}}',17)"><img src="../public/images/dot.gif" /></a>
 				</div>
 			</div>
 		{{/each}}
@@ -96,7 +96,7 @@
 			}],
 			lists: [{
 				img: "../uploads/image4.png",
-				title: "荒野求生-第二季",
+				title: "荒野求生第二季荒野求生第二季荒野求生第二季荒野求生第二季荒野求生第二季荒野求生第二季",
 				href: "#"
 			},{
 				img: "",
@@ -143,6 +143,29 @@
 				document.getElementById('listTpl').innerHTML = text;
 			}
 		});
+
+
+		var title = "";
+		function addMarquee(id, size){
+			size = size || 0;
+			var reg = new RegExp("(<|<\/)marquee>", "g");
+			var element = document.querySelector(id);
+			title = element.children[1].innerHTML.replace(reg, "");
+			if(title.length > size){
+				element.children[1].innerHTML = "<marquee>"+title+"</marquee>";
+			}
+		}
+		function removeMarquee(id, size){
+			size = size || 0;
+			var element = document.querySelector(id);
+			if(!title) {
+				var reg = new RegExp("(<|<\/)marquee>", "g");
+				title = element.children[1].innerHTML.replace(reg, "");
+			}
+			if(title.length > size){
+				element.children[1].innerHTML = title;
+			}
+		}
 	</script>
 </body>
 </html>

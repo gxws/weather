@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>error</title>
+	<link rel="stylesheet" href="../public/css/common.css" />
+	<script src="../public/js/template.js"></script>
+	<style type="text/css">
+	.error {position: absolute;top: 250px;width: 100%;text-align: center;}
+	</style>
+</head>
+<body style="background: url('../public/images/bg-duoyun.jpg') no-repeat;">
+	<div id="root"></div>
+	<script src="../public/js/common.js"></script>
+	<script id="templateId" type="text/html">
+		<div id="header">
+			<div class="header-nav">
+				{{each headers as v i}}
+					<span id="nav{{i+1}}" class="nav-{{i+1}} {{if v.active}}active{{/if}}"></span>
+				{{/each}}
+			</div>
+		</div>
+		<div class="error">
+			<img src="../public/images/{{if statuscode}}{{statuscode}}{{else}}exception{{/if}}.png" />
+		</div>
+		<div id="footer">
+			<div class="footer-menu">
+				<span id="menu1" class="menu-1"></span>
+				<span id="menu2" class="menu-2"></span>
+				<span id="menu3" class="menu-3"></span>
+				<span id="menu4" class="menu-4"></span>
+			</div>
+		</div>
+		<div id="controller">
+			<div class="con-header">
+				{{each headers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#nav{{i+1}}')" onblur="removeFocus('#nav{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+			<div class="con-footer">
+				{{each footers as v i}}
+					<a href="{{v.href}}" onfocus="addFocus('#menu{{i+1}}')" onblur="removeFocus('#menu{{i+1}}')"><img src="../public/images/dot.gif" /></a>
+				{{/each}}
+			</div>
+		</div>
+	</script>
+	<script type="text/javascript">
+		var data = {
+			headers: [{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			},{
+				href: "#",
+				active: false
+			}],
+			footers: [{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			},{
+				href: "#",
+			}],
+			statuscode: '404'
+		};
+	
+		var html = template('templateId', data);
+		document.getElementById('root').innerHTML = html;
+	</script>
+</body>
+</html>
